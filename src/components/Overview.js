@@ -1,5 +1,6 @@
 import React from 'react';
 import Entry from './Entry';
+import EntriesError from './EntriesError';
 import FetchAPI from '../fetchAPI';
 import STORE from '../store';
 
@@ -15,14 +16,18 @@ function Overview(props) {
         name={entryInfo.name}
         logo={entryInfo.logo}
         website={entryInfo.website}
-        jobListings={1}
+        jobListings={jobListings}
       />
     );
   });
 
   // sort entries by total job listings
 
-  return <div className="Overview">{entries}</div>;
+  return (
+    <div className="Overview">
+      <EntriesError>{entries}</EntriesError>
+    </div>
+  );
 }
 
 export default Overview;
