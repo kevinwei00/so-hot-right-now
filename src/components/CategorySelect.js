@@ -1,10 +1,13 @@
 import React from 'react';
+import STORE from '../store';
 
 function CategorySelect() {
-  const categories = [1, 2, 3].map((category, index) => {
+  const allCategories = Object.keys(STORE);
+  const categoryNames = allCategories.map((category, index) => {
+    const categoryName = STORE[category].categoryName;
     return (
-      <option key={index} value={''}>
-        {category.toString()}
+      <option key={`${index}:${categoryName}`} value={index}>
+        {categoryName}
       </option>
     );
   });
@@ -17,7 +20,7 @@ function CategorySelect() {
         name="Categories"
         id="Categories"
       >
-        {categories}
+        {categoryNames}
       </select>
     </div>
   );
