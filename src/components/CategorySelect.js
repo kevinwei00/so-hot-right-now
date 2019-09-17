@@ -1,13 +1,12 @@
 import React from 'react';
 import STORE from '../store';
 
-function CategorySelect() {
+function CategorySelect(props) {
   const allCategories = Object.keys(STORE);
-  const categoryNames = allCategories.map((category, index) => {
-    const categoryName = STORE[category].categoryName;
+  const categoryNames = allCategories.map((category) => {
     return (
-      <option key={`${index}:${categoryName}`} value={index}>
-        {categoryName}
+      <option key={category} value={category}>
+        {STORE[category].categoryName}
       </option>
     );
   });
@@ -19,6 +18,7 @@ function CategorySelect() {
         className="CategorySelect__Categories"
         name="Categories"
         id="Categories"
+        onChange={(event) => props.handleChange(event.currentTarget.value)}
       >
         {categoryNames}
       </select>
