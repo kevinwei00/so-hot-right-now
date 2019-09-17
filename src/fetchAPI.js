@@ -21,9 +21,7 @@ function composeQueryString(inputArray) {
 
 function GetNumJobListingsFor(inputArray) {
   const queryString = composeQueryString(inputArray);
-  return fetchHandler(`${BASE_URL}${queryString}`).then((responseData) =>
-    responseData
-  );
+  return fetchHandler(`${BASE_URL}${queryString}`).then((responseData) => responseData.totalResults);
 }
 
 export default {
