@@ -21,7 +21,7 @@ export default class Main extends Component {
     return (
       <main className="Main">
         <CategorySelect handleChange={this.handleChange} />
-        <Overview category={this.state.currentCategory} />
+        <Overview currentCategory={this.state.currentCategory} />
       </main>
     );
   }

@@ -7,7 +7,7 @@ function Entry(props) {
         <h3>{props.name}</h3>
         <p><img src={props.logo} alt={`${props.name} Logo`} /></p>
       </a>
-      <p>Job Listings: {props.jobListings}</p>
+      <p>Job Listings: {props.numJobListings}</p>
     </div>
   );
 }

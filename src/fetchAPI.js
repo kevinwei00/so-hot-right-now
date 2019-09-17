@@ -1,3 +1,4 @@
+// testing proxy: https://cors-anywhere.herokuapp.com/
 const BASE_URL =
   'http://api.indeed.com/ads/apisearch?publisher=4013469286425094&v=2&limit=0&format=json&q=title%3A%28developer+OR+engineer%29+';
 
