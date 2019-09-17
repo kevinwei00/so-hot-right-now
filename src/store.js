@@ -257,3 +257,4 @@ export default {
 // requirejs, babel, jquery
 // graphql, hadoop
 // http clients: fetch, axios
+// openshift: devops
