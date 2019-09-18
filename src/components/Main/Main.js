@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Overview from './Overview';
-import CategorySelect from './CategorySelect';
+import './Main.css';
+import Overview from '../Overview/Overview';
+import CategorySelect from '../CategorySelect/CategorySelect';
 
 export default class Main extends Component {
   constructor(props) {

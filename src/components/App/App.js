@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Main from './components/Main';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+import Main from '../Main/Main';
 
 export default class App extends Component {
   render() {

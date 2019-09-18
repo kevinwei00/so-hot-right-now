@@ -1,5 +1,6 @@
 import React from 'react';
-import STORE from '../store';
+import './CategorySelect.css';
+import STORE from '../../store';
 
 function CategorySelect(props) {
   const allCategories = Object.keys(STORE);

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Entry from './Entry';
-import EntriesError from './EntriesError';
-import FetchAPI from '../fetchAPI';
-import STORE from '../store';
+import './Overview.css';
+import Entry from '../Entry/Entry';
+import EntriesError from '../EntriesError/EntriesError';
+import FetchAPI from '../../fetchAPI';
+import STORE from '../../store';
 
 export default class Overview extends Component {
   constructor(props) {

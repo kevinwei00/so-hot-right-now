@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './EntriesError.css';
 
 export default class EntriesError extends Component {
   constructor(props) {
