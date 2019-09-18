@@ -123,7 +123,7 @@ export default {
     },
   },
   framework_web: {
-    categoryName: 'More Frameworks',
+    categoryName: 'Other Frameworks',
     list: {
       asp: { name: 'ASP.NET', keywords: ['asp', 'asp.net'], logo: '', website: '' },
       codeigniter: { name: 'CodeIgniter', keywords: ['codeigniter'], logo: '', website: '' },
@@ -254,7 +254,6 @@ export default {
   },
 };
 
-// requirejs, babel, jquery
-// graphql, hadoop
+// requirejs, babel, jquery, stencil, node, REST, graphQL, hadoop
 // http clients: fetch, axios
-// openshift: devops
+// devops: openshift
