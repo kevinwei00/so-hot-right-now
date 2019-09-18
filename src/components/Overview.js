@@ -36,9 +36,11 @@ export default class Overview extends Component {
   updateEntries = (category) => {
     Promise.all(this.getEntryPromises(category)).then(
       (resolvedEntryPromises) => {
-        // sort entries by total job listings
+        const sortedEntries = [...resolvedEntryPromises].sort((a, b) =>
+          a.props.numJobListings < b.props.numJobListings ? 1 : -1
+        );
         this.setState({
-          entries: resolvedEntryPromises,
+          entries: sortedEntries,
         });
       }
     );
@@ -48,7 +50,7 @@ export default class Overview extends Component {
     this.updateEntries(this.props.currentCategory);
   };
 
-  // https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
+  // TODO: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
   componentWillReceiveProps = (receivedProps) => {
     this.setState({
       entries: 'Loading...',

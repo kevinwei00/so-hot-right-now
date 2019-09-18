@@ -12,7 +12,7 @@ function CategorySelect(props) {
   });
 
   return (
-    // select should be disabled during a fetch
+    // TODO: select should be disabled during a fetch
     <div className="CategorySelect">
       <label htmlFor="Categories">Select a Category</label>
       <select
