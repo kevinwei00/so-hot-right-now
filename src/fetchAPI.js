@@ -1,6 +1,8 @@
-// testing proxy: https://cors-anywhere.herokuapp.com/
-const BASE_URL =
-  'http://api.indeed.com/ads/apisearch?publisher=4013469286425094&v=2&limit=0&format=json&q=title%3A%28developer+OR+engineer%29+';
+const PROXY = 'https://cors-anywhere.herokuapp.com/';
+const ENDPOINT = 'http://api.indeed.com/ads/apisearch?';
+const API_KEY = 'publisher=4013469286425094';
+const PARAMS = 'v=2&limit=0&format=json';
+const BASE_QUERY = 'q=title%3A%28developer+OR+engineer%29+'; // title:(developer OR engineer)
 
 function fetchHandler(...args) {
   return fetch(...args)
@@ -15,14 +17,23 @@ function fetchHandler(...args) {
     .catch((error) => console.error(error));
 }
 
-function composeQueryString(inputArray) {
+function composeQueryString(keywordsArray) {
   //("a" OR "b" OR "c")
-  return inputArray.join('+');
+  // %22 = "
+  // %28 = (
+  // %29 = )
+  const keywordsWithQuotes = keywordsArray.map((keyword) => `%22${keyword}%22`);
+  const keywordsCombined = keywordsWithQuotes.join('+OR+');
+  return `%28${keywordsCombined}%29`;
 }
 
-function GetNumJobListingsFor(inputArray) {
-  const queryString = composeQueryString(inputArray);
-  return fetchHandler(`${BASE_URL}${queryString}`).then((responseData) => {
+function composeURL(queryString) {
+  return `${PROXY}${ENDPOINT}&${API_KEY}&${PARAMS}&${BASE_QUERY}${queryString}`;
+}
+
+function GetNumJobListingsFor(keywordsArray) {
+  const queryString = composeQueryString(keywordsArray);
+  return fetchHandler(composeURL(queryString)).then((responseData) => {
     return responseData ? responseData.totalResults : 'N/A';
   });
 }

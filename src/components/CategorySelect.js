@@ -12,15 +12,19 @@ function CategorySelect(props) {
   });
 
   return (
+    // select should be disabled during a fetch
     <div className="CategorySelect">
       <label htmlFor="Categories">Select a Category</label>
       <select
         className="CategorySelect__Categories"
         name="Categories"
         id="Categories"
+        defaultValue={'DEFAULT'}
         onChange={(event) => props.handleChange(event.currentTarget.value)}
       >
-        <option disabled selected value>Category</option>
+        <option value="DEFAULT" disabled>
+          Category
+        </option>
         {categoryNames}
       </select>
     </div>
