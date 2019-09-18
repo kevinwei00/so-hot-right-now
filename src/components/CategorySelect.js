@@ -20,6 +20,7 @@ function CategorySelect(props) {
         id="Categories"
         onChange={(event) => props.handleChange(event.currentTarget.value)}
       >
+        <option disabled selected value>Category</option>
         {categoryNames}
       </select>
     </div>

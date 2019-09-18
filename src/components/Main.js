@@ -7,7 +7,7 @@ export default class Main extends Component {
     super(props);
 
     this.state = {
-      currentCategory: 'authentication',
+      currentCategory: null,
     };
   }
 
@@ -21,10 +21,9 @@ export default class Main extends Component {
     return (
       <main className="Main">
         <CategorySelect handleChange={this.handleChange} />
-        <Overview currentCategory={this.state.currentCategory} />
+        {this.state.currentCategory && <Overview currentCategory={this.state.currentCategory} />}
+        {!this.state.currentCategory && <h3>Select a category first</h3>}
       </main>
     );
   }
 }
-
-Main.defaultProps = {};
