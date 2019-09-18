@@ -63,10 +63,10 @@ export default {
   database_nosql: {
     categoryName: 'NoSQL Databases',
     list: {
-      cassandra: { name: 'Apache Cassandra', keywords: ['cassandra'], logo: '', website: '' },
-      cosmosdb: { name: 'Azure Cosmos DB', keywords: ['cosmosdb', 'cosmos db'], logo: '', website: '' },
+      cassandra: { name: 'Cassandra', keywords: ['cassandra'], logo: '', website: '' },
+      cosmosdb: { name: 'Cosmos DB', keywords: ['cosmosdb', 'cosmos db'], logo: '', website: '' },
       couchbase: { name: 'Couchbase', keywords: ['couchbase'], logo: '', website: '' },
-      couchdb: { name: 'Apache CouchDB', keywords: ['couchdb', 'couch db'], logo: '', website: '' },
+      couchdb: { name: 'CouchDB', keywords: ['couchdb', 'couch db'], logo: '', website: '' },
       mongodb: { name: 'MongoDB', keywords: ['mongo', 'mongodb'], logo: '', website: '' },
     },
   },
@@ -104,17 +104,20 @@ export default {
       chef: { name: 'Chef', keywords: ['chef'], logo: '', website: '' },
       kubernetes: { name: 'Kubernetes', keywords: ['kubernetes'], logo: '', website: '' },
       maven: { name: 'Maven', keywords: ['maven'], logo: '', website: '' },
+      openshift: { name: 'OpenShift', keywords: ['openshift'], logo: '', website: '' },
       puppet: { name: 'Puppet', keywords: ['puppet'], logo: '', website: '' },
       terraform: { name: 'Terraform', keywords: ['terraform'], logo: '', website: '' },
     },
   },
-  framework: {
-    categoryName: 'Frameworks',
+  framework_js: {
+    categoryName: 'JavaScript Frameworks',
     list: {
       angular: { name: 'Angular', keywords: ['angular', 'angularjs', 'angular.js'], logo: '', website: '' },
       aurelia: { name: 'Aurelia', keywords: ['aurelia', 'aureliajs', 'aurelia.js'], logo: '', website: '' },
       backbone: { name: 'Backbone.js', keywords: ['backbone', 'backbonejs', 'backbone.js'], logo: '', website: '' },
       ember: { name: 'Ember.js', keywords: ['ember', 'emberjs', 'ember.js'], logo: '', website: '' },
+      extjs: { name: 'Ext JS', keywords: ['extjs', 'ext js'], logo: '', website: '' },
+      knockout: { name: 'Knockout', keywords: ['knockout'], logo: '', website: '' },
       mithril: { name: 'Mithril', keywords: ['mithril', 'mithriljs', 'mithril.js'], logo: '', website: '' },
       polymer: { name: 'Polymer', keywords: ['polymer', 'polymerjs', 'polymer.js'], logo: '', website: '' },
       react: { name: 'React', keywords: ['react', 'reactjs', 'react.js'], logo: '', website: '' },
@@ -122,21 +125,25 @@ export default {
       vue: { name: 'Vue', keywords: ['vue', 'vuejs', 'vue.js'], logo: '', website: '' },
     },
   },
-  framework_web: {
+  framework_node: {
+    categoryName: 'Node.js Frameworks',
+    list: {
+      express: { name: 'Express', keywords: ['express', 'expressjs', 'express.js'], logo: '', website: '' },
+      hapi: { name: 'hapi', keywords: ['hapi'], logo: '', website: '' },
+      koa: { name: 'Koa', keywords: ['koa'], logo: '', website: '' },
+      meteor: { name: 'Meteor', keywords: ['meteor', 'meteorjs', 'meteor.js'], logo: '', website: '' },
+    },
+  },
+  framework_other: {
     categoryName: 'Other Frameworks',
     list: {
       asp: { name: 'ASP.NET', keywords: ['asp', 'asp.net'], logo: '', website: '' },
       codeigniter: { name: 'CodeIgniter', keywords: ['codeigniter'], logo: '', website: '' },
       django: { name: 'Django', keywords: ['django'], logo: '', website: '' },
-      express: { name: 'Express', keywords: ['express', 'expressjs', 'express.js'], logo: '', website: '' },
-      extjs: { name: 'Ext JS', keywords: ['extjs', 'ext js'], logo: '', website: '' },
       flask: { name: 'Flask', keywords: ['flask'], logo: '', website: '' },
       grails: { name: 'Grails', keywords: ['grails'], logo: '', website: '' },
-      hapi: { name: 'hapi', keywords: ['hapi'], logo: '', website: '' },
-      knockout: { name: 'Knockout', keywords: ['knockout'], logo: '', website: '' },
-      koa: { name: 'Koa', keywords: ['koa'], logo: '', website: '' },
+      hadoop: { name: 'Hadoop', keywords: ['hadoop'], logo: '', website: '' },
       laravel: { name: 'Laravel', keywords: ['laravel'], logo: '', website: '' },
-      meteor: { name: 'Meteor', keywords: ['meteor', 'meteorjs', 'meteor.js'], logo: '', website: '' },
       phoenix: { name: 'Phoenix', keywords: ['phoenix'], logo: '', website: '' },
       play: { name: 'Play Framework', keywords: ['play framework'], logo: '', website: '' },
       rails: { name: 'Ruby on Rails', keywords: ['ruby on rails', 'rails'], logo: '', website: '' },
@@ -170,8 +177,8 @@ export default {
   messageBroker: {
     categoryName: 'Message Brokers',
     list: {
-      activemq: { name: 'Apache ActiveMQ', keywords: ['activemq', 'active mq'], logo: '', website: '' },
-      kafka: { name: 'Apache Kafka', keywords: ['kafka'], logo: '', website: '' },
+      activemq: { name: 'ActiveMQ', keywords: ['activemq', 'active mq'], logo: '', website: '' },
+      kafka: { name: 'Kafka', keywords: ['kafka'], logo: '', website: '' },
       rabbitmq: { name: 'RabbitMQ', keywords: ['rabbitmq', 'rabbit mq'], logo: '', website: '' },
       wso2: { name: 'WSO2 Message Broker', keywords: ['wso2'], logo: '', website: '' },
     },
@@ -254,6 +261,5 @@ export default {
   },
 };
 
-// requirejs, babel, jquery, stencil, node, REST, graphQL, hadoop
+// requirejs, babel, jquery, node, REST, graphQL
 // http clients: fetch, axios
-// devops: openshift
