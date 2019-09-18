@@ -1,0 +1,43 @@
+/**********************************
+  Override global box-sizing
+***********************************/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/**********************************
+  Stretch containers to parents
+***********************************/
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/**********************************
+  Global variables
+***********************************/
+:root {
+  --heading-size: 48px;
+  --body-size: 16px;
+  --color-white-main: #f0f0f0;
+  --color-black-main: #1a1a1a;
+}
+
+body {
+  font: var(--body-size) 'Roboto Condensed', sans-serif;
+  color: var(--color-black-main);
+  background-color: var(--color-white-main);
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

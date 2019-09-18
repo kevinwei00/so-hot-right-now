@@ -1,0 +1,16 @@
+.App {
+  /**********************************
+    Contains:
+    - Header
+    - Main
+    - Footer 
+  ***********************************/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /**********************************
+    Stretch to parent (#root)
+  ***********************************/
+  height: 100%;
+}

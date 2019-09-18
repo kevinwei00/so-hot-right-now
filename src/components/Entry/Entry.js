@@ -5,11 +5,11 @@ function Entry(props) {
   return (
     <div className="Entry">
       <a href={props.website} target="_blank" rel="noopener noreferrer">
-        <h3>{props.name}</h3>
          {/* props.logo */}
-        <p><img src={`https://placeimg.com/128/128/tech`} alt={`${props.name} Logo`} /></p>
+        <div className="Entry__Logo"><img src={`https://placeimg.com/128/128/tech`} alt={`${props.name} Logo`} /></div>
+        <div className="Entry__Name">{props.name}</div>
       </a>
-      <p>Job Listings: {props.numJobListings}</p>
+      <div className="Entry__NumJobs">{props.numJobListings.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')} jobs</div>
     </div>
   );
 }

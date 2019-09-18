@@ -1,0 +1,21 @@
+.Entry {
+  margin: 0 auto;
+  width: 128px;
+}
+
+/**********************************
+  Conditional margins for 2 or more
+  items
+***********************************/
+.Entry:first-child:nth-last-child(n + 2) ~ .Entry {
+  margin-left: 10px;
+}
+
+.Entry__Logo {
+}
+
+.Entry__Name {
+}
+
+.Entry__NumJobs {
+}
