@@ -22,7 +22,7 @@ function composeQueryString(keywordsArray) {
   // %22 = "
   // %28 = (
   // %29 = )
-  const keywordsWithQuotes = keywordsArray.map((keyword) => `%22${keyword}%22`);
+  const keywordsWithQuotes = keywordsArray.map((keyword) => `%22${encodeURIComponent(keyword)}%22`);
   const keywordsCombined = keywordsWithQuotes.join('+OR+');
   return `%28${keywordsCombined}%29`;
 }
