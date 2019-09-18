@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './Overview.css';
+import './EntryList.css';
 import Entry from '../Entry/Entry';
 import EntriesError from '../EntriesError/EntriesError';
 import FetchAPI from '../../fetchAPI';
 import STORE from '../../store';
 
-export default class Overview extends Component {
+export default class EntryList extends Component {
   constructor(props) {
     super(props);
 
@@ -61,7 +61,7 @@ export default class Overview extends Component {
 
   render() {
     return (
-      <div className="Overview">
+      <div className="EntryList">
         <EntriesError>{this.state.entries}</EntriesError>
       </div>
     );

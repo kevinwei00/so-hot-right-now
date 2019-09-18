@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Main.css';
-import Overview from '../Overview/Overview';
+import EntryList from '../EntryList/EntryList';
 import CategorySelect from '../CategorySelect/CategorySelect';
 
 export default class Main extends Component {
@@ -22,7 +22,7 @@ export default class Main extends Component {
     return (
       <main className="Main">
         <CategorySelect handleChange={this.handleChange} />
-        {this.state.currentCategory && <Overview currentCategory={this.state.currentCategory} />}
+        {this.state.currentCategory && <EntryList currentCategory={this.state.currentCategory} />}
         {!this.state.currentCategory && <h3>Select a category first</h3>}
       </main>
     );
