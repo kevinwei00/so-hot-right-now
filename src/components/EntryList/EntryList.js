@@ -19,7 +19,7 @@ export default class EntryList extends Component {
     return Object.entries(STORE[category].list).map((entry) => {
       const entryKey = entry[0];
       const entryInfo = entry[1];
-      return FetchAPI.GetNumJobListingsFor(entryInfo.keywords).then(
+      return FetchAPI.GetNumJobListingsFor(entryInfo.keywords, entryInfo.useAnd).then(
         (resultNumJobListings) => {
           return (
             <Entry

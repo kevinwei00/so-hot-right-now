@@ -68,7 +68,7 @@ export default {
   css_preprocessor: {
     categoryName: 'CSS Preprocessors',
     list: {
-      less: { name: 'LESS', keywords: ['less', 'css'], logo: '', website: '' }, // AND
+      less: { name: 'LESS', useAnd: true, keywords: ['less', 'css'], logo: '', website: '' },
       postcss: { name: 'PostCSS', keywords: ['postcss', 'post css'], logo: '', website: '' },
       sass: { name: 'Sass/SCSS', keywords: ['sass', 'scss', 'sassy'], logo: '', website: '' },
       stylus: { name: 'Stylus', keywords: ['stylus'], logo: '', website: '' },

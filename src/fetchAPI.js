@@ -17,13 +17,13 @@ function fetchHandler(...args) {
     .catch((error) => console.error(error));
 }
 
-function composeQueryString(keywordsArray) {
+function composeQueryString(keywordsArray, useAnd) {
   //("a" OR "b" OR "c")
   // %22 = "
   // %28 = (
   // %29 = )
   const keywordsWithQuotes = keywordsArray.map((keyword) => `%22${encodeURIComponent(keyword)}%22`);
-  const keywordsCombined = keywordsWithQuotes.join('+OR+');
+  const keywordsCombined = keywordsWithQuotes.join(useAnd ? '+AND+' : '+OR+');
   return `%28${keywordsCombined}%29`;
 }
 
@@ -31,8 +31,8 @@ function composeURL(queryString) {
   return `${PROXY}${ENDPOINT}&${API_KEY}&${PARAMS}&${BASE_QUERY}${queryString}`;
 }
 
-function GetNumJobListingsFor(keywordsArray) {
-  const queryString = composeQueryString(keywordsArray);
+function GetNumJobListingsFor(keywordsArray, useAnd = false) {
+  const queryString = composeQueryString(keywordsArray, useAnd);
   return fetchHandler(composeURL(queryString)).then((responseData) => {
     return responseData ? responseData.totalResults : -1;
   });
