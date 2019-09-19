@@ -34,7 +34,7 @@ function composeURL(queryString) {
 function GetNumJobListingsFor(keywordsArray) {
   const queryString = composeQueryString(keywordsArray);
   return fetchHandler(composeURL(queryString)).then((responseData) => {
-    return responseData ? responseData.totalResults : 'N/A';
+    return responseData ? responseData.totalResults : -1;
   });
 }
 

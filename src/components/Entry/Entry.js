@@ -14,12 +14,17 @@ function Entry(props) {
         </div>
         <div className="Entry__Name">{props.name}</div>
         <div className="Entry__NumJobs">
-          <span className="Entry__NumJobs__Num">
-            {props.numJobListings
-              .toString()
-              .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-          </span>{' '}
-          jobs
+          {props.numJobListings === -1 && 'N/A'}
+          {props.numJobListings !== -1 && (
+            <>
+              <span className="Entry__NumJobs__Num">
+                {props.numJobListings
+                  .toString()
+                  .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
+              </span>{' '}
+              jobs
+            </>
+          )}
         </div>
       </a>
     </div>
