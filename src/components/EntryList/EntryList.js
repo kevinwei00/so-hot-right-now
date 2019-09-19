@@ -49,17 +49,41 @@ export default class EntryList extends Component {
           isLoading: false,
           entries: sortedEntries,
         });
+        this.setColumnCount(sortedEntries.length);
       }
     );
   };
 
   componentDidMount = () => {
     this.updateEntries(this.props.currentCategory);
+
+    window.addEventListener('resize', this.setColumnCount);
   };
 
   // TODO: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
   componentWillReceiveProps = (receivedProps) => {
     this.updateEntries(receivedProps.currentCategory);
+  };
+
+  setColumnCount = (numEntries) => {
+    numEntries =
+      typeof numEntries === 'number' ? numEntries : this.state.entries.length;
+    let count = numEntries < 3 ? numEntries : 3;
+    // window.innerWidth is accurate regardless of orientation
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 768) {
+      if (screenWidth < 1024) {
+        // 768px => 4 columns
+        count = numEntries < 4 ? numEntries : 4;
+      } else {
+        // 1024px => 5 columns
+        count = numEntries < 5 ? numEntries : 5;
+      }
+    }
+    document.documentElement.style.setProperty(
+      '--column-count',
+      count.toString()
+    );
   };
 
   render() {

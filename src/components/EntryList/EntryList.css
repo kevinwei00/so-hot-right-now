@@ -34,7 +34,11 @@
 /************************************************************************
   Media queries for larger screens
 *************************************************************************/
-@media screen and (min-width: 415px) {
+:root {
+  --column-count: 3;
+}
+
+@media screen and (min-width: 480px) {
   .EntryList {
     /**********************************
       Clear horizontal scrolling props
@@ -56,26 +60,8 @@
       Override flex with grid
     ***********************************/
     display: grid;
-    grid-template-columns: 160px 160px 160px;
+    grid-template-columns: repeat(var(--column-count), 160px);
     float: initial;
-    /* padding: 0 20px; */
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .EntryList__InnerContainer {
-    /**********************************
-      Increase columns to 4
-    ***********************************/
-    grid-template-columns: 160px 160px 160px 160px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .EntryList__InnerContainer {
-    /**********************************
-      Increase columns by 5
-    ***********************************/
-    grid-template-columns: 160px 160px 160px 160px 160px;
+    padding: initial;
   }
 }

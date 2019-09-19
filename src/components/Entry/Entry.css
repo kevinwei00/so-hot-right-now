@@ -12,8 +12,6 @@
   /**********************************
     Own properties
   ***********************************/
-  /* float: left on the parent container broke centering */
-  /* margin: 0 auto; */
   width: fit-content;
 }
 
@@ -43,18 +41,20 @@
 /************************************************************************
   Media queries for larger screens
 *************************************************************************/
-@media screen and (min-width: 415px) {
-  .Entry {
-    /**********************************
-      Spacing between grid entries
-    ***********************************/
-    margin-bottom: 20px;
-  }
-
-  /**********************************
-    Clear flex spacing props
-  ***********************************/
+@media screen and (min-width: 480px) {
+  .Entry,
   .Entry:first-child ~ .Entry {
-    margin-left: initial;
+    /**********************************
+      Add bottom spacing between grid 
+      rows, and center them
+    ***********************************/
+    margin: 0 auto 20px;
+    justify-content: center;
+    align-items: center;
+
+    /**********************************
+      Clear unused prop
+    ***********************************/
+    flex-direction: initial;
   }
 }
