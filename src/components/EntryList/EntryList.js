@@ -10,7 +10,8 @@ export default class EntryList extends Component {
     super(props);
 
     this.state = {
-      entries: 'Loading...',
+      isLoading: false,
+      entries: [],
     };
   }
 
@@ -35,12 +36,17 @@ export default class EntryList extends Component {
   };
 
   updateEntries = (category) => {
+    this.setState({
+      isLoading: true,
+    });
+
     Promise.all(this.getEntryPromises(category)).then(
       (resolvedEntryPromises) => {
         const sortedEntries = [...resolvedEntryPromises].sort((a, b) =>
           a.props.numJobListings < b.props.numJobListings ? 1 : -1
         );
         this.setState({
+          isLoading: false,
           entries: sortedEntries,
         });
       }
@@ -53,9 +59,6 @@ export default class EntryList extends Component {
 
   // TODO: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
   componentWillReceiveProps = (receivedProps) => {
-    this.setState({
-      entries: 'Loading...',
-    });
     this.updateEntries(receivedProps.currentCategory);
   };
 
@@ -63,7 +66,10 @@ export default class EntryList extends Component {
     return (
       <div className="EntryList">
         <div className="EntryList__InnerContainer">
-          <EntriesError>{this.state.entries}</EntriesError>
+          {this.state.isLoading && <h2>Loading...</h2>}
+          {!this.state.isLoading && (
+            <EntriesError>{this.state.entries}</EntriesError>
+          )}
         </div>
       </div>
     );
