@@ -5,10 +5,10 @@ function Entry(props) {
   return (
     <div className="Entry">
       <a href={props.website} target="_blank" rel="noopener noreferrer">
-        {/* props.logo */}
         <div className="Entry__Logo">
           <img
-            src={`https://placeimg.com/128/128/tech`}
+            className="Entry__Logo__Image"
+            src={props.logo}
             alt={`${props.name} Logo`}
           />
         </div>

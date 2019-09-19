@@ -23,11 +23,20 @@
 }
 
 .Entry__Logo {
+  background-color: white;
+}
+
+.Entry__Logo,
+.Entry__Logo__Image {
+  max-height: 128px;
+  max-width: 128px;
+  border-radius: 10px;
 }
 
 .Entry__Name {
   font-size: 1.1em;
   width: 128px;
+  margin-top: 5px;
 }
 
 .Entry__NumJobs {
