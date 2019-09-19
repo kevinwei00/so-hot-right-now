@@ -1,16 +1,30 @@
 .EntryList {
   /**********************************
-    Contains:
-    - Entry
+    Horizontal scrolling
   ***********************************/
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 
   /**********************************
     Own properties
   ***********************************/
-  margin: 60px 10px 0;
+  margin: 60px 0 0; 
+
+  /**********************************
+    Gradient overlay
+  ***********************************/
+  mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+}
+
+.EntryList__InnerContainer {
+  /**********************************
+    Contains:
+    - Entry
+  ***********************************/
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  float: left;
 }

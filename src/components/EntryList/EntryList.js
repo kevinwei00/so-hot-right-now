@@ -62,7 +62,9 @@ export default class EntryList extends Component {
   render() {
     return (
       <div className="EntryList">
-        <EntriesError>{this.state.entries}</EntriesError>
+        <div className="EntryList__InnerContainer">
+          <EntriesError>{this.state.entries}</EntriesError>
+        </div>
       </div>
     );
   }
