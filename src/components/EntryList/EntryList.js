@@ -71,7 +71,7 @@ export default class EntryList extends Component {
     let count = numEntries < 3 ? numEntries : 3;
     // window.innerWidth is accurate regardless of orientation
     const screenWidth = window.innerWidth;
-    if (screenWidth > 768) {
+    if (screenWidth >= 768) {
       if (screenWidth < 1024) {
         // 768px => 4 columns
         count = numEntries < 4 ? numEntries : 4;
