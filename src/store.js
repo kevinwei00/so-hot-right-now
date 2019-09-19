@@ -1,9 +1,23 @@
 export default {
+  appDev_desktop: {
+    categoryName: 'Desktop App Dev',
+    list: {
+      electron: { name: 'Electron', keywords: ['electron'], logo: '', website: '' },
+    },
+  },
+  appDev_mobile: {
+    categoryName: 'Mobile App Dev',
+    list: {
+      ionic: { name: 'Ionic', keywords: ['ionic'], logo: '', website: '' },
+      flutter: { name: 'Flutter', keywords: ['flutter'], logo: '', website: '' },
+      reactNative: { name: 'React Native', keywords: ['react native'], logo: '', website: '' },
+    },
+  },
   authentication: {
     categoryName: 'Authentication',
     list: {
-      jwt: { name: 'JWT', keywords: ['jwt', 'json web token'], logo: '', website: '' },
-      oauth: { name: 'OAuth', keywords: ['oauth'], logo: '', website: '' },
+      jwt: { name: 'JSON Web Token', keywords: ['jwt', 'json web token'], logo: '', website: '' },
+      oauth: { name: 'OAuth', keywords: ['oauth', 'oauth2'], logo: '', website: '' },
       openid: { name: 'OpenID', keywords: ['openid'], logo: '', website: '' },
     },
   },
@@ -20,9 +34,17 @@ export default {
     categoryName: 'CI/CD',
     list: {
       circleci: { name: 'CircleCI', keywords: ['circleci', 'circle ci'], logo: '', website: '' },
-      jenkins: { name: 'Jenkins', keywords: ['jenkins'], logo: '', website: '' },
+      jenkins: { name: 'Jenkins', keywords: ['jenkins', 'jenkin'], logo: '', website: '' },
       teamcity: { name: 'TeamCity', keywords: ['teamcity', 'team city'], logo: '', website: '' },
       travisci: { name: 'Travis CI', keywords: ['travisci', 'travis ci'], logo: '', website: '' },
+    },
+  },
+  clientServer: {
+    categoryName: 'Client/Server',
+    list: {
+      graphql: { name: 'GraphQL', keywords: ['graphql', 'graph ql'], logo: '', website: '' },
+      nodejs: { name: 'Node.js', keywords: ['nodejs', 'node js', 'node.js'], logo: '', website: '' },
+      rest: { name: 'REST', keywords: ['rest api', 'rest apis', 'restful'], logo: '', website: '' },
     },
   },
   css_architecture: {
@@ -47,12 +69,12 @@ export default {
     categoryName: 'CSS Preprocessors',
     list: {
       less: { name: 'LESS', keywords: ['less', 'css'], logo: '', website: '' }, // AND
-      postcss: { name: 'PostCSS', keywords: ['postcss'], logo: '', website: '' },
-      sass: { name: 'Sass/SCSS', keywords: ['sass', 'scss'], logo: '', website: '' },
+      postcss: { name: 'PostCSS', keywords: ['postcss', 'post css'], logo: '', website: '' },
+      sass: { name: 'Sass/SCSS', keywords: ['sass', 'scss', 'sassy'], logo: '', website: '' },
       stylus: { name: 'Stylus', keywords: ['stylus'], logo: '', website: '' },
     },
   },
-  database_inmemory: {
+  database_inMemory: {
     categoryName: 'In-Memory Databases',
     list: {
       aerospike: { name: 'Aerospike', keywords: ['aerospike'], logo: '', website: '' },
@@ -65,7 +87,7 @@ export default {
     list: {
       cassandra: { name: 'Cassandra', keywords: ['cassandra'], logo: '', website: '' },
       cosmosdb: { name: 'Cosmos DB', keywords: ['cosmosdb', 'cosmos db'], logo: '', website: '' },
-      couchbase: { name: 'Couchbase', keywords: ['couchbase'], logo: '', website: '' },
+      couchbase: { name: 'Couchbase', keywords: ['couchbase', 'couch base'], logo: '', website: '' },
       couchdb: { name: 'CouchDB', keywords: ['couchdb', 'couch db'], logo: '', website: '' },
       mongodb: { name: 'MongoDB', keywords: ['mongo', 'mongodb'], logo: '', website: '' },
     },
@@ -74,10 +96,10 @@ export default {
     categoryName: 'Relational Databases',
     list: {
       mariadb: { name: 'MariaDB', keywords: ['mariadb', 'maria db'], logo: '', website: '' },
-      mssql: { name: 'Microsoft SQL Server', keywords: ['mssql', 'ms sql', 'microsoft sql'], logo: '', website: '' },
+      mssql: { name: 'Microsoft SQL Server', keywords: ['mssql', 'ms sql', 'microsoft sql', 'microsoftsql'], logo: '', website: '' },
       mysql: { name: 'MySQL', keywords: ['mysql', 'my sql'], logo: '', website: '' },
       oracle: { name: 'Oracle', keywords: ['oracledb', 'oracle db'], logo: '', website: '' },
-      postgresql: { name: 'PostgreSQL', keywords: ['postgres', 'postgresql', 'postgre sql'], logo: '', website: '' },
+      postgresql: { name: 'PostgreSQL', keywords: ['postgres', 'postgresql', 'postgre sql', 'postgre'], logo: '', website: '' },
     },
   },
   deployment: {
@@ -91,20 +113,15 @@ export default {
       heroku: { name: 'Heroku', keywords: ['heroku'], logo: '', website: '' },
     },
   },
-  desktopApplication: {
-    categoryName: 'Desktop Applications',
-    list: {
-      electron: { name: 'Electron', keywords: ['electron'], logo: '', website: '' },
-    },
-  },
-  devops: {
+  devOps: {
     categoryName: 'DevOps',
     list: {
       ansible: { name: 'Ansible', keywords: ['ansible'], logo: '', website: '' },
       chef: { name: 'Chef', keywords: ['chef'], logo: '', website: '' },
+      gitlab: { name: 'GitLab', keywords: ['gitlab', 'git lab'], logo: '', website: '' },
       kubernetes: { name: 'Kubernetes', keywords: ['kubernetes'], logo: '', website: '' },
       maven: { name: 'Maven', keywords: ['maven'], logo: '', website: '' },
-      openshift: { name: 'OpenShift', keywords: ['openshift'], logo: '', website: '' },
+      openshift: { name: 'OpenShift', keywords: ['openshift', 'open shift'], logo: '', website: '' },
       puppet: { name: 'Puppet', keywords: ['puppet'], logo: '', website: '' },
       terraform: { name: 'Terraform', keywords: ['terraform'], logo: '', website: '' },
     },
@@ -112,7 +129,7 @@ export default {
   framework_js: {
     categoryName: 'JavaScript Frameworks',
     list: {
-      angular: { name: 'Angular', keywords: ['angular', 'angularjs', 'angular.js'], logo: '', website: '' },
+      angular: { name: 'Angular', keywords: ['angular', 'angularjs', 'angular.js', 'angular2', 'angular3', 'angular4', 'angular5', 'angular6', 'angular7', 'angular8'], logo: '', website: '' },
       aurelia: { name: 'Aurelia', keywords: ['aurelia', 'aureliajs', 'aurelia.js'], logo: '', website: '' },
       backbone: { name: 'Backbone.js', keywords: ['backbone', 'backbonejs', 'backbone.js'], logo: '', website: '' },
       ember: { name: 'Ember.js', keywords: ['ember', 'emberjs', 'ember.js'], logo: '', website: '' },
@@ -174,6 +191,16 @@ export default {
       typescript: { name: 'TypeScript', keywords: ['typescript', 'type script'], logo: '', website: '' },
     },
   },
+  library_javascript: {
+    categoryName: 'JavaScript Libraries',
+    list: {
+      d3: { name: 'D3', keywords: ['d3js', 'd3 js', 'd3.js'], logo: '', website: '' },
+      jquery: { name: 'jQuery', keywords: ['jquery'], logo: '', website: '' },
+      lodash: { name: 'Lodash', keywords: ['lodash'], logo: '', website: '' },
+      requirejs: { name: 'RequireJS', keywords: ['requirejs', 'require js', 'require.js'], logo: '', website: '' },
+      threejs: { name: 'three.js', keywords: ['threejs', 'three js', 'three.js'], logo: '', website: '' },
+    },
+  },
   messageBroker: {
     categoryName: 'Message Brokers',
     list: {
@@ -183,19 +210,11 @@ export default {
       wso2: { name: 'WSO2 Message Broker', keywords: ['wso2'], logo: '', website: '' },
     },
   },
-  mobileApplication: {
-    categoryName: 'Mobile Applications',
-    list: {
-      ionic: { name: 'Ionic', keywords: ['ionic'], logo: '', website: '' },
-      flutter: { name: 'Flutter', keywords: ['flutter'], logo: '', website: '' },
-      reactNative: { name: 'React Native', keywords: ['react native'], logo: '', website: '' },
-    },
-  },
   packageManager: {
     categoryName: 'Package Managers',
     list: {
       bower: { name: 'Bower', keywords: ['bower'], logo: '', website: '' },
-      npm: { name: 'npm', keywords: ['npm'], logo: '', website: '' },
+      npm: { name: 'npm', keywords: ['npm', 'node package manager'], logo: '', website: '' },
       yarn: { name: 'Yarn', keywords: ['yarn'], logo: '', website: '' },
     },
   },
@@ -210,8 +229,8 @@ export default {
   ssr: {
     categoryName: 'Server Side Rendering',
     list: {
-      next: { name: 'Next.js', keywords: ['nextjs', 'next.js'], logo: '', website: '' },
-      nuxt: { name: 'Nuxt.js', keywords: ['nuxt.js'], logo: '', website: '' },
+      next: { name: 'Next.js', keywords: ['nextjs', 'next js', 'next.js'], logo: '', website: '' },
+      nuxt: { name: 'Nuxt.js', keywords: ['nuxtjs', 'nuxt js', 'nuxt.js'], logo: '', website: '' },
     },
   },
   stateManagement: {
@@ -221,7 +240,7 @@ export default {
       mobx: { name: 'MobX', keywords: ['mobx'], logo: '', website: '' },
       ngrx: { name: 'NgRx', keywords: ['ngrx'], logo: '', website: '' },
       redux: { name: 'Redux', keywords: ['redux'], logo: '', website: '' },
-      rxjs: { name: 'RxJS', keywords: ['rxjs'], logo: '', website: '' },
+      rxjs: { name: 'RxJS', keywords: ['rxjs', 'rx js'], logo: '', website: '' },
       vuex: { name: 'Vuex', keywords: ['vuex'], logo: '', website: '' },
     },
   },
@@ -231,16 +250,16 @@ export default {
       gatsby: { name: 'Gatsby', keywords: ['gatsby'], logo: '', website: '' },
       hugo: { name: 'Hugo', keywords: ['hugo'], logo: '', website: '' },
       jekyll: { name: 'Jekyll', keywords: ['jekyll'], logo: '', website: '' },
-      next: { name: 'Next.js', keywords: ['nextjs', 'next.js'], logo: '', website: '' },
-      nuxt: { name: 'Nuxt.js', keywords: ['nuxt.js'], logo: '', website: '' },
+      next: { name: 'Next.js', keywords: ['nextjs', 'next js', 'next.js'], logo: '', website: '' },
+      nuxt: { name: 'Nuxt.js', keywords: ['nuxtjs', 'nuxt js', 'nuxt.js'], logo: '', website: '' },
     },
   },
   taskRunner: {
     categoryName: 'Task Runners',
     list: {
       grunt: { name: 'Grunt', keywords: ['grunt'], logo: '', website: '' },
-      gulp: { name: 'Gulp', keywords: ['gulp'], logo: '', website: '' },
-      npm: { name: 'npm', keywords: ['npm'], logo: '', website: '' },
+      gulp: { name: 'gulp', keywords: ['gulp'], logo: '', website: '' },
+      npm: { name: 'npm', keywords: ['npm', 'node package manager'], logo: '', website: '' },
     },
   },
   testing: {
@@ -260,6 +279,3 @@ export default {
     },
   },
 };
-
-// requirejs, babel, jquery, node, REST, graphQL
-// http clients: fetch, axios
