@@ -15,7 +15,6 @@
   /* float: left on the parent container broke centering */
   /* margin: 0 auto; */
   width: fit-content;
-  height: 224px;
 }
 
 /**********************************
@@ -29,7 +28,14 @@
 }
 
 .Entry__Name {
+  font-size: 1.1em;
+  width: 128px;
 }
 
 .Entry__NumJobs {
+  color: rgb(56, 56, 56);
+}
+
+.Entry__NumJobs__Num {
+  color: black;
 }
