@@ -199,6 +199,7 @@ export default {
       lodash: { name: 'Lodash', keywords: ['lodash'], logo: '', website: '' },
       requirejs: { name: 'RequireJS', keywords: ['requirejs', 'require js', 'require.js'], logo: '', website: '' },
       threejs: { name: 'three.js', keywords: ['threejs', 'three js', 'three.js'], logo: '', website: '' },
+      underscore: { name: 'Underscore', keywords: ['underscore', 'underscore.js'], logo: '', website: '' },
     },
   },
   messageBroker: {
