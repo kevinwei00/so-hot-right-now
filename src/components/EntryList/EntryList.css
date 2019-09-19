@@ -30,3 +30,52 @@
   padding: 0 20px;
   float: left;
 }
+
+/************************************************************************
+  Media queries for larger screens
+*************************************************************************/
+@media screen and (min-width: 415px) {
+  .EntryList {
+    /**********************************
+      Clear horizontal scrolling props
+    ***********************************/
+    overflow-x: initial;
+    overflow-y: initial;
+    -webkit-overflow-scrolling: initial;
+    mask-image: initial;
+    -webkit-mask-image: initial;
+
+    /**********************************
+      Subtract Entry.margin-bottom (20px)
+    ***********************************/
+    padding-bottom: 30px;
+  }
+
+  .EntryList__InnerContainer {
+    /**********************************
+      Override flex with grid
+    ***********************************/
+    display: grid;
+    grid-template-columns: 160px 160px 160px;
+    float: initial;
+    /* padding: 0 20px; */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .EntryList__InnerContainer {
+    /**********************************
+      Increase columns to 4
+    ***********************************/
+    grid-template-columns: 160px 160px 160px 160px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .EntryList__InnerContainer {
+    /**********************************
+      Increase columns by 5
+    ***********************************/
+    grid-template-columns: 160px 160px 160px 160px 160px;
+  }
+}

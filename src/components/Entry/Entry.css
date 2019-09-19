@@ -39,3 +39,22 @@
 .Entry__NumJobs__Num {
   color: black;
 }
+
+/************************************************************************
+  Media queries for larger screens
+*************************************************************************/
+@media screen and (min-width: 415px) {
+  .Entry {
+    /**********************************
+      Spacing between grid entries
+    ***********************************/
+    margin-bottom: 20px;
+  }
+
+  /**********************************
+    Clear flex spacing props
+  ***********************************/
+  .Entry:first-child ~ .Entry {
+    margin-left: initial;
+  }
+}
