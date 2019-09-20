@@ -7,7 +7,7 @@ function Header() {
       <div className="Header__Container">
         <h1>
           <div className="Header__LogoTop">
-            So <i>Hot</i>
+            So <span className="Header__LogoTop--emphasize">Hot</span>
             <svg viewBox="0 -20 120 240">
               <defs>
                 <linearGradient
