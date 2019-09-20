@@ -15,10 +15,11 @@
 }
 
 .CategorySelect__Label {
-
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .CategorySelect__Categories {
   width: 200px;
 }
-

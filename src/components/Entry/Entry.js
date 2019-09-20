@@ -17,6 +17,7 @@ function Entry(props) {
           {props.numJobListings === -1 && 'N/A'}
           {props.numJobListings !== -1 && (
             <>
+              {'+ '}
               <span className="Entry__NumJobs__Num">
                 {props.numJobListings
                   .toString()

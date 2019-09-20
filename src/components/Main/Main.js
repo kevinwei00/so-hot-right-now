@@ -23,7 +23,6 @@ export default class Main extends Component {
       <main className="Main">
         <CategorySelect handleChange={this.handleChange} />
         {this.state.currentCategory && <EntryList currentCategory={this.state.currentCategory} />}
-        {!this.state.currentCategory && <h2>Select a category first</h2>}
       </main>
     );
   }

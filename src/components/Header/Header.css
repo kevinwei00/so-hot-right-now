@@ -9,3 +9,30 @@
   ***********************************/
   border-top: 4px solid tomato;
 }
+
+.Header__Container {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: tomato;
+  text-shadow: 1px 1px 1px rgba(0,0,0);
+  line-height: 1.1;
+}
+
+.Header__LogoTop {
+  font-size: 1.75em;
+  padding-right: 40px;
+  position: relative;
+}
+
+.Header__LogoBottom {
+  font-size: 1.25em;
+  letter-spacing: 1px;
+}
+
+svg {
+  position: absolute;
+  width: 40px;
+  right: -10px;
+  bottom: -10px;
+}
