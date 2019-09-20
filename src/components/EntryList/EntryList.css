@@ -9,7 +9,7 @@
   /**********************************
     Own properties
   ***********************************/
-  margin: 60px 0 0;
+  margin: 40px 0 0;
   padding-bottom: 50px;
   border-bottom: 1px solid gray;
 
@@ -27,7 +27,7 @@
   ***********************************/
   display: flex;
   flex-wrap: nowrap;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   float: left;
 }
 
