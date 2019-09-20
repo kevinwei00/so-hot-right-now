@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { TimelineMax } from 'gsap/all';
+import { TimelineMax, CSSPlugin, AttrPlugin } from 'gsap/all';
 import './Fire.css';
 
 export default class Fire extends Component {
   startFireAnim = () => {
+    const plugins = [CSSPlugin, AttrPlugin];
+
     Array.from(document.querySelectorAll('.spark')).forEach(function(s) {
       new TimelineMax({
         repeat: -1,
