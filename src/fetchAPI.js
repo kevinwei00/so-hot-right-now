@@ -1,5 +1,5 @@
 const PROXY = 'https://cors-anywhere.herokuapp.com/';
-const ENDPOINT = 'http://api.indeed.com/ads/apisearch?';
+const ENDPOINT = 'https://api.indeed.com/ads/apisearch?';
 const API_KEY = process.env.REACT_APP_API_KEY;
 const PARAMS = 'v=2&limit=0&format=json';
 const BASE_QUERY = 'q=title%3A%28developer+OR+engineer%29+'; // title:(developer OR engineer)
@@ -28,7 +28,7 @@ function composeQueryString(keywordsArray, useAnd) {
 }
 
 function composeURL(queryString) {
-  return `${ENDPOINT}&${API_KEY}&${PARAMS}&${BASE_QUERY}${queryString}`;
+  return `${PROXY}${ENDPOINT}&${API_KEY}&${PARAMS}&${BASE_QUERY}${queryString}`;
 }
 
 function GetNumJobListingsFor(keywordsArray, useAnd = false) {
