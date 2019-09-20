@@ -4,4 +4,5 @@ import './index.css';
 import 'normalize.css';
 import App from './components/App/App';
 
+console.log(process.env);
 ReactDOM.render(<App />, document.getElementById('root'));
