@@ -29,7 +29,8 @@ body,
 }
 
 body {
-  font: var(--body-size) 'Open Sans', sans-serif;
+  font-size: var(--body-size);
+  font-family: 'Open Sans', sans-serif;
   color: var(--color-black-main);
   background-color: var(--color-white-main);
   line-height: 1.5;

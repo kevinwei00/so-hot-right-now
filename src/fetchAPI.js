@@ -28,7 +28,7 @@ function composeQueryString(keywordsArray, useAnd) {
 }
 
 function composeURL(queryString) {
-  return `${PROXY}${ENDPOINT}&${API_KEY}&${PARAMS}&${BASE_QUERY}${queryString}`;
+  return `${ENDPOINT}&${API_KEY}&${PARAMS}&${BASE_QUERY}${queryString}`;
 }
 
 function GetNumJobListingsFor(keywordsArray, useAnd = false) {
