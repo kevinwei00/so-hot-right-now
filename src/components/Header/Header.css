@@ -15,6 +15,7 @@
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .Header__LogoTop,
@@ -39,7 +40,7 @@
 
 .Header__LogoTop {
   font-size: 1.75em;
-  padding-right: 40px;
+  padding-right: 50px;
 }
 
 .Header__LogoTop:after {
@@ -58,8 +59,10 @@
 .Header__LogoBottom {
   font-size: 1.3em;
   letter-spacing: 1px;
+  display: inline;
 }
 
 .Header__LogoBottom:after {
   content: "Right Now";
+  display: inline;
 }
