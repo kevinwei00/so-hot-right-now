@@ -214,7 +214,7 @@ export default {
     list: {
       less: { name: 'LESS', useAnd: true, keywords: ['less', 'css'], logo: less, website: 'http://lesscss.org' },
       postcss: { name: 'PostCSS', keywords: ['postcss', 'post css'], logo: postcss, website: 'https://postcss.org' },
-      sass: { name: 'Sass/SCSS', keywords: ['sass', 'scss', 'sassy'], logo: sass, website: 'https://sass-lang.com' },
+      sass: { name: 'Sass / SCSS', keywords: ['sass', 'scss', 'sassy'], logo: sass, website: 'https://sass-lang.com' },
       stylus: { name: 'Stylus', keywords: ['stylus'], logo: stylus, website: 'http://stylus-lang.com' },
     },
   },
@@ -308,7 +308,7 @@ export default {
       phoenix: { name: 'Phoenix', keywords: ['phoenix'], logo: phoenix, website: 'https://phoenixframework.org' },
       play: { name: 'Play Framework', keywords: ['play framework'], logo: play, website: 'https://www.playframework.com' },
       rails: { name: 'Ruby on Rails', keywords: ['ruby on rails', 'rails'], logo: rails, website: 'https://rubyonrails.org' },
-      spring: { name: 'Spring + Spring Boot', keywords: ['spring', 'spring boot'], logo: spring, website: 'https://spring.io' },
+      spring: { name: 'Spring / Spring Boot', keywords: ['spring', 'spring boot'], logo: spring, website: 'https://spring.io' },
       symfony: { name: 'Symfony', keywords: ['symfony'], logo: symfony, website: 'https://symfony.com' },
       yii: { name: 'Yii', keywords: ['yii'], logo: yii, website: 'https://www.yiiframework.com' },
       zend: { name: 'Zend Framework', keywords: ['zend', 'zend framework'], logo: zend, website: 'https://framework.zend.com' },
