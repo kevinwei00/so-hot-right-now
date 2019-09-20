@@ -5,13 +5,7 @@ function Fire() {
   return (
     <svg className="Fire" viewBox="0 -20 120 240">
       <defs>
-        <linearGradient
-          id="flame-gradient"
-          x1="0%"
-          y1="0%"
-          x2="0%"
-          y2="100%"
-        >
+        <linearGradient id="flame-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop stopColor="#ffb200" offset="0.2" />
           <stop stopColor="#dc0000" offset="1" />
         </linearGradient>
