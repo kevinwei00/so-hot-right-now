@@ -24,13 +24,14 @@
 
 .Entry__Logo {
   background-color: white;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
 }
 
 .Entry__Logo,
 .Entry__Logo__Image {
   max-height: 128px;
   max-width: 128px;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .Entry__Name {
