@@ -56,9 +56,12 @@ export default class EntryList extends Component {
 
   componentDidMount = () => {
     this.updateEntries(this.props.currentCategory);
-
     window.addEventListener('resize', this.setColumnCount);
   };
+
+  componentWillUnmount = () => {
+    window.removeEventListener('resize', this.setColumnCount);
+  }
 
   // TODO: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
   componentWillReceiveProps = (receivedProps) => {
