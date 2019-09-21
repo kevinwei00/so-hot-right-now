@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './Main.css';
+import './Overview.css';
 import EntryList from '../EntryList/EntryList';
 import CategorySelect from '../CategorySelect/CategorySelect';
 
-export default class Main extends Component {
+export default class Overview extends Component {
   constructor(props) {
     super(props);
 
@@ -20,10 +20,10 @@ export default class Main extends Component {
 
   render() {
     return (
-      <main className="Main">
+      <section className="Overview">
         <CategorySelect handleChange={this.handleChange} />
         {this.state.currentCategory && <EntryList key={this.state.currentCategory} currentCategory={this.state.currentCategory} />}
-      </main>
+      </section>
     );
   }
 }

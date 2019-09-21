@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header';
-import Main from '../Main/Main';
+import Overview from '../Overview/Overview';
 import Footer from '../Footer/Footer';
 
 export default class App extends Component {
@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Main />
+        <Overview />
         <Footer />
       </div>
     );
