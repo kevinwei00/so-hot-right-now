@@ -20,10 +20,10 @@ function CategorySelect(props) {
         className="CategorySelect__Categories"
         name="Categories"
         id="Categories"
-        defaultValue={'DEFAULT'}
+        defaultValue={props.currentCategory ?  props.currentCategory : 'NO_SELECTION'}
         onChange={(event) => props.handleChange(event.currentTarget.value)}
       >
-        <option value="DEFAULT" disabled>
+        <option value="NO_SELECTION" disabled>
           Category
         </option>
         {categoryNames}
