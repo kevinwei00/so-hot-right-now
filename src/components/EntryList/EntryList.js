@@ -63,11 +63,6 @@ export default class EntryList extends Component {
     window.removeEventListener('resize', this.setColumnCount);
   }
 
-  // TODO: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
-  componentWillReceiveProps = (receivedProps) => {
-    this.updateEntries(receivedProps.currentCategory);
-  };
-
   setColumnCount = (numEntries) => {
     numEntries =
       typeof numEntries === 'number' ? numEntries : this.state.entries.length;

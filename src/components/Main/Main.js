@@ -22,7 +22,7 @@ export default class Main extends Component {
     return (
       <main className="Main">
         <CategorySelect handleChange={this.handleChange} />
-        {this.state.currentCategory && <EntryList currentCategory={this.state.currentCategory} />}
+        {this.state.currentCategory && <EntryList key={this.state.currentCategory} currentCategory={this.state.currentCategory} />}
       </main>
     );
   }
