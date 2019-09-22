@@ -1,8 +1,8 @@
-.CategorySelect {
+.EntrySelect {
   /**********************************
     Contains:
-    - CategorySelect__Label
-    - CategorySelect__Categories 
+    - EntrySelect__Label
+    - EntrySelect__Categories 
   ***********************************/
   display: flex;
   flex-direction: column;
@@ -14,12 +14,12 @@
   padding: 10px 10px;
 }
 
-.CategorySelect__Label {
+.EntrySelect__Label {
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.CategorySelect__Categories {
+.EntrySelect__Categories {
   width: 200px;
 }

@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import CategoryContext from '../../CategoryContext';
 import PropTypes from 'prop-types';
 import './Main.css';
-import EntryMaster from '../EntryMaster/EntryMaster';
+import EntryMaster from '../Entry/EntryMaster';
 import About from '../About/About';
 
 export default class Main extends Component {

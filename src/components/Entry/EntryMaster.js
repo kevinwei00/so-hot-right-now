@@ -1,15 +1,15 @@
 import React from 'react';
 import CategoryContext from '../../CategoryContext';
 import './EntryMaster.css';
-import EntryList from '../EntryList/EntryList';
-import CategorySelect from '../CategorySelect/CategorySelect';
+import EntryList from './EntryList';
+import EntrySelect from './EntrySelect';
 
 export default function EntryMaster() {
   return (
     <CategoryContext.Consumer>
       {({ currentCategory, handleChange }) => (
         <section className="EntryMaster">
-          <CategorySelect
+          <EntrySelect
             onChange={handleChange}
             currentCategory={currentCategory}
           />

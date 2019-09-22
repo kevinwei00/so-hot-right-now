@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CategorySelect.css';
+import './EntrySelect.css';
 import STORE from '../../store';
 
-export default function CategorySelect(props) {
+export default function EntrySelect(props) {
   const allCategories = Object.keys(STORE);
   const categoryNames = allCategories.map((category) => {
     return (
@@ -15,12 +15,12 @@ export default function CategorySelect(props) {
 
   return (
     // TODO: select should be disabled during a fetch
-    <div className="CategorySelect">
-      <label className="CategorySelect__Label" htmlFor="Categories">
+    <div className="EntrySelect">
+      <label className="EntrySelect__Label" htmlFor="Categories">
         What's hot right now in...
       </label>
       <select
-        className="CategorySelect__Categories"
+        className="EntrySelect__Categories"
         name="Categories"
         id="Categories"
         defaultValue={
@@ -37,7 +37,7 @@ export default function CategorySelect(props) {
   );
 }
 
-CategorySelect.propTypes = {
+EntrySelect.propTypes = {
   currentCategory: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
 };

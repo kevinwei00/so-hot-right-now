@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './EntryList.css';
-import Entry from '../Entry/Entry';
-import EntriesError from '../EntriesError/EntriesError';
+import Entry from './Entry';
+import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import FetchAPI from '../../fetchAPI';
 import STORE from '../../store';
 
@@ -92,7 +92,7 @@ export default class EntryList extends Component {
         <div className="EntryList__InnerContainer">
           {this.state.isLoading && <h2>Loading...</h2>}
           {!this.state.isLoading && (
-            <EntriesError>{this.state.entries}</EntriesError>
+            <ErrorBoundary>{this.state.entries}</ErrorBoundary>
           )}
         </div>
       </div>

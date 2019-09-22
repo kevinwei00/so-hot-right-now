@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './EntriesError.css';
+import './ErrorBoundary.css';
 
-export default class EntriesError extends Component {
+export default class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
 
