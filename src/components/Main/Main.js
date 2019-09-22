@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import CategoryContext from '../../CategoryContext';
+import EntryContext from '../../EntryContext';
 import PropTypes from 'prop-types';
 import './Main.css';
 import EntryMaster from '../Entry/EntryMaster';
@@ -29,24 +29,24 @@ export default class Main extends Component {
 
     return (
       <main className="Main">
-        <CategoryContext.Provider value={contextValue}>
+        <EntryContext.Provider value={contextValue}>
           <Switch>
             <Route exact path="/" component={EntryMaster} />
             <Route exact path="/about" component={About} />
           </Switch>
-        </CategoryContext.Provider>
+        </EntryContext.Provider>
       </main>
     );
   }
 }
 
-CategoryContext.Provider.propTypes = {
+EntryContext.Provider.propTypes = {
   value: PropTypes.shape({
     currentCategory: PropTypes.string.isRequired,
     handleChange: PropTypes.func.isRequired,
   }),
 };
 
-CategoryContext.Provider.propTypes = {
+EntryContext.Provider.propTypes = {
   value: PropTypes.object.isRequired,
 };

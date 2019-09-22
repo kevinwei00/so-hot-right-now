@@ -1,12 +1,12 @@
 import React from 'react';
-import CategoryContext from '../../CategoryContext';
+import EntryContext from '../../EntryContext';
 import './EntryMaster.css';
 import EntryList from './EntryList';
 import EntrySelect from './EntrySelect';
 
 export default function EntryMaster() {
   return (
-    <CategoryContext.Consumer>
+    <EntryContext.Consumer>
       {({ currentCategory, handleChange }) => (
         <section className="EntryMaster">
           <EntrySelect
@@ -21,6 +21,6 @@ export default function EntryMaster() {
           )}
         </section>
       )}
-    </CategoryContext.Consumer>
+    </EntryContext.Consumer>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CategoryContext = React.createContext({
+const EntryContext = React.createContext({
   currentCategory: null,
   handleChange: () => {},
 });
 
-export default CategoryContext;
+export default EntryContext;
