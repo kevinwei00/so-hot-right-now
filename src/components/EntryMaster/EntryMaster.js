@@ -1,37 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CategoryContext from '../../CategoryContext';
 import './EntryMaster.css';
 import EntryList from '../EntryList/EntryList';
 import CategorySelect from '../CategorySelect/CategorySelect';
 
-export default class EntryMaster extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      currentCategory: null,
-    };
-  }
-
-  handleChange = (selectedCategory) => {
-    this.setState({
-      currentCategory: selectedCategory,
-    });
-  };
-
-  render() {
-    return (
-      <section className="EntryMaster">
-        <CategorySelect
-          handleChange={this.handleChange}
-          currentCategory={this.state.currentCategory}
-        />
-        {this.state.currentCategory && (
-          <EntryList
-            key={this.state.currentCategory}
-            currentCategory={this.state.currentCategory}
+export default function EntryMaster() {
+  return (
+    <CategoryContext.Consumer>
+      {({ currentCategory, handleChange }) => (
+        <section className="EntryMaster">
+          <CategorySelect
+            onChange={handleChange}
+            currentCategory={currentCategory}
           />
-        )}
-      </section>
-    );
-  }
+          {currentCategory && (
+            <EntryList
+              key={currentCategory}
+              currentCategory={currentCategory}
+            />
+          )}
+        </section>
+      )}
+    </CategoryContext.Consumer>
+  );
 }

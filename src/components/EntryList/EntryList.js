@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './EntryList.css';
 import Entry from '../Entry/Entry';
 import EntriesError from '../EntriesError/EntriesError';
@@ -19,19 +20,20 @@ export default class EntryList extends Component {
     return Object.entries(STORE[category].list).map((entry) => {
       const entryKey = entry[0];
       const entryInfo = entry[1];
-      return FetchAPI.GetNumJobListingsFor(entryInfo.keywords, entryInfo.useAnd).then(
-        (resultNumJobListings) => {
-          return (
-            <Entry
-              key={entryKey}
-              name={entryInfo.name}
-              logo={entryInfo.logo}
-              website={entryInfo.website}
-              numJobListings={resultNumJobListings}
-            />
-          );
-        }
-      );
+      return FetchAPI.GetNumJobListingsFor(
+        entryInfo.keywords,
+        entryInfo.useAnd
+      ).then((resultNumJobListings) => {
+        return (
+          <Entry
+            key={entryKey}
+            name={entryInfo.name}
+            logo={entryInfo.logo}
+            website={entryInfo.website}
+            numJobListings={resultNumJobListings}
+          />
+        );
+      });
     });
   };
 
@@ -61,7 +63,7 @@ export default class EntryList extends Component {
 
   componentWillUnmount = () => {
     window.removeEventListener('resize', this.setColumnCount);
-  }
+  };
 
   setColumnCount = (numEntries) => {
     numEntries =
@@ -97,3 +99,7 @@ export default class EntryList extends Component {
     );
   }
 }
+
+EntryList.propTypes = {
+  currentCategory: PropTypes.string.isRequired,
+};

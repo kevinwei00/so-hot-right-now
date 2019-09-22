@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './CategorySelect.css';
 import STORE from '../../store';
 
@@ -25,7 +26,7 @@ export default function CategorySelect(props) {
         defaultValue={
           props.currentCategory ? props.currentCategory : 'NO_SELECTION'
         }
-        onChange={(event) => props.handleChange(event.currentTarget.value)}
+        onChange={(event) => props.onChange(event.currentTarget.value)}
       >
         <option value="NO_SELECTION" disabled>
           Category
@@ -35,3 +36,8 @@ export default function CategorySelect(props) {
     </div>
   );
 }
+
+CategorySelect.propTypes = {
+  currentCategory: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};

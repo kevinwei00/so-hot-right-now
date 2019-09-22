@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Entry.css';
 
 export default function Entry(props) {
@@ -31,3 +32,10 @@ export default function Entry(props) {
     </div>
   );
 }
+
+Entry.propTypes = {
+  name: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
+  website: PropTypes.string.isRequired,
+  numJobListings: PropTypes.number.isRequired,
+};
