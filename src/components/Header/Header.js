@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import Fire from '../Fire/Fire';
 
-function Header() {
+export default function Header() {
   return (
     <header className="Header">
       <div className="Header__Container">
@@ -17,5 +17,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

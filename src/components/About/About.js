@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
 
-function About() {
+export default function About() {
   return (
     <section className="About">
       <h2>What's This For?</h2>
@@ -13,5 +13,3 @@ function About() {
     </section>
   );
 }
-
-export default About;

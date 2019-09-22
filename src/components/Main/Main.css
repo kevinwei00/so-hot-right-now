@@ -1,8 +1,8 @@
-.Overview {
+.Main {
   /**********************************
     Contains:
-    - CategorySelect
-    - EntryList 
+    - EntryMaster
+    - About 
   ***********************************/
   display: flex;
   flex-direction: column;

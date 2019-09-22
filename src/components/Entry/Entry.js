@@ -1,7 +1,7 @@
 import React from 'react';
 import './Entry.css';
 
-function Entry(props) {
+export default function Entry(props) {
   return (
     <div className="Entry">
       <a href={props.website} target="_blank" rel="noopener noreferrer">
@@ -31,5 +31,3 @@ function Entry(props) {
     </div>
   );
 }
-
-export default Entry;

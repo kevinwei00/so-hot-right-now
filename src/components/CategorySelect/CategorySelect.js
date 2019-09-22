@@ -2,7 +2,7 @@ import React from 'react';
 import './CategorySelect.css';
 import STORE from '../../store';
 
-function CategorySelect(props) {
+export default function CategorySelect(props) {
   const allCategories = Object.keys(STORE);
   const categoryNames = allCategories.map((category) => {
     return (
@@ -15,12 +15,16 @@ function CategorySelect(props) {
   return (
     // TODO: select should be disabled during a fetch
     <div className="CategorySelect">
-      <label className="CategorySelect__Label" htmlFor="Categories">What's hot right now in...</label>
+      <label className="CategorySelect__Label" htmlFor="Categories">
+        What's hot right now in...
+      </label>
       <select
         className="CategorySelect__Categories"
         name="Categories"
         id="Categories"
-        defaultValue={props.currentCategory ?  props.currentCategory : 'NO_SELECTION'}
+        defaultValue={
+          props.currentCategory ? props.currentCategory : 'NO_SELECTION'
+        }
         onChange={(event) => props.handleChange(event.currentTarget.value)}
       >
         <option value="NO_SELECTION" disabled>
@@ -31,5 +35,3 @@ function CategorySelect(props) {
     </div>
   );
 }
-
-export default CategorySelect;
