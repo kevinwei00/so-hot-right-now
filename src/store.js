@@ -71,6 +71,7 @@ import kubernetes from './logos/kubernetes.png';
 import laravel from './logos/laravel.png';
 import less from './logos/less.png';
 import lodash from './logos/lodash.png';
+import loopback from './logos/loopback.png';
 import lucene from './logos/lucene.png';
 import mariadb from './logos/mariadb.png';
 import materialize from './logos/materialize.png';
@@ -126,6 +127,7 @@ import solr from './logos/solr.png';
 import spring from './logos/spring.png';
 import stylus from './logos/stylus.png';
 import svelte from './logos/svelte.png';
+import swagger from './logos/swagger.png';
 import symfony from './logos/symfony.png';
 import tailwind from './logos/tailwind.png';
 import teamcity from './logos/teamcity.png';
@@ -142,6 +144,20 @@ import yii from './logos/yii.png';
 import zend from './logos/zend.png';
 
 export default {
+  apiDev: {
+    categoryName: 'API/Backend Dev',
+    list: {
+      express: { name: 'Express', keywords: ['express', 'expressjs', 'express.js'], logo: express, website: 'http://expressjs.com' },
+      graphql: { name: 'GraphQL', keywords: ['graphql', 'graph ql'], logo: graphql, website: 'https://graphql.org' },
+      hapi: { name: 'hapi', keywords: ['hapi'], logo: hapi, website: 'https://hapi.dev' },
+      koa: { name: 'Koa', keywords: ['koa'], logo: koa, website: 'https://koajs.com' },
+      loopback: { name: 'LoopBack', keywords: ['loopback'], logo: loopback, website: 'https://loopback.io' },
+      meteor: { name: 'Meteor', keywords: ['meteor', 'meteorjs', 'meteor.js'], logo: meteor, website: 'https://www.meteor.com' },
+      nodejs: { name: 'Node.js', keywords: ['nodejs', 'node js', 'node.js'], logo: nodejs, website: 'https://nodejs.org' },
+      rest: { name: 'REST', keywords: ['rest api', 'rest apis', 'restful'], logo: rest, website: 'https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm' },
+      swagger: { name: 'Swagger', keywords: ['swagger'], logo: swagger, website: 'https://swagger.io' },
+    },
+  },
   appDev_desktop: {
     categoryName: 'Desktop App Dev',
     list: {
@@ -180,14 +196,6 @@ export default {
       jenkins: { name: 'Jenkins', keywords: ['jenkins', 'jenkin'], logo: jenkins, website: 'https://jenkins.io' },
       teamcity: { name: 'TeamCity', keywords: ['teamcity', 'team city'], logo: teamcity, website: 'https://jetbrains.com/teamcity' },
       travisci: { name: 'Travis CI', keywords: ['travisci', 'travis ci'], logo: travisci, website: 'https://travis-ci.com' },
-    },
-  },
-  clientServer: {
-    categoryName: 'Client/Server',
-    list: {
-      graphql: { name: 'GraphQL', keywords: ['graphql', 'graph ql'], logo: graphql, website: 'https://graphql.org' },
-      nodejs: { name: 'Node.js', keywords: ['nodejs', 'node js', 'node.js'], logo: nodejs, website: 'https://nodejs.org' },
-      rest: { name: 'REST', keywords: ['rest api', 'rest apis', 'restful'], logo: rest, website: 'https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm' },
     },
   },
   css_architecture: {
@@ -240,7 +248,7 @@ export default {
     categoryName: 'Relational Databases',
     list: {
       mariadb: { name: 'MariaDB', keywords: ['mariadb', 'maria db'], logo: mariadb, website: 'https://mariadb.com' },
-      mssql: { name: 'Microsoft SQL Server', keywords: ['mssql', 'ms sql', 'microsoft sql', 'microsoftsql'], logo: mssql, website: 'https://www.microsoft.com/en-us/sql-server' },
+      mssql: { name: 'Microsoft SQL Server', keywords: ['mssql', 'ms sql', 'microsoft sql', 'microsoftsql', 'sql server'], logo: mssql, website: 'https://www.microsoft.com/en-us/sql-server' },
       mysql: { name: 'MySQL', keywords: ['mysql', 'my sql'], logo: mysql, website: 'https://www.mysql.com' },
       oracle: { name: 'Oracle', keywords: ['oracledb', 'oracle db'], logo: oracle, website: 'https://www.oracle.com/database' },
       postgresql: { name: 'PostgreSQL', keywords: ['postgres', 'postgresql', 'postgre sql', 'postgre'], logo: postgresql, website: 'https://www.postgresql.org' },
@@ -271,7 +279,7 @@ export default {
     },
   },
   framework_js: {
-    categoryName: 'JavaScript Frameworks',
+    categoryName: 'Frontend JS Frameworks',
     list: {
       angular: { name: 'Angular', keywords: ['angular', 'angularjs', 'angular.js', 'angular2', 'angular3', 'angular4', 'angular5', 'angular6', 'angular7', 'angular8'], logo: angular, website: 'https://angular.io' },
       aurelia: { name: 'Aurelia', keywords: ['aurelia', 'aureliajs', 'aurelia.js'], logo: aurelia, website: 'https://aurelia.io' },
@@ -286,17 +294,8 @@ export default {
       vue: { name: 'Vue', keywords: ['vue', 'vuejs', 'vue.js'], logo: vue, website: 'https://vuejs.org' },
     },
   },
-  framework_node: {
-    categoryName: 'Node.js Frameworks',
-    list: {
-      express: { name: 'Express', keywords: ['express', 'expressjs', 'express.js'], logo: express, website: 'http://expressjs.com' },
-      hapi: { name: 'hapi', keywords: ['hapi'], logo: hapi, website: 'https://hapi.dev' },
-      koa: { name: 'Koa', keywords: ['koa'], logo: koa, website: 'https://koajs.com' },
-      meteor: { name: 'Meteor', keywords: ['meteor', 'meteorjs', 'meteor.js'], logo: meteor, website: 'https://www.meteor.com' },
-    },
-  },
   framework_other: {
-    categoryName: 'Other Frameworks',
+    categoryName: 'Other Web Frameworks',
     list: {
       asp: { name: 'ASP.NET', keywords: ['asp', 'asp.net'], logo: asp, website: 'https://dotnet.microsoft.com/apps/aspnet' },
       codeigniter: { name: 'CodeIgniter', keywords: ['codeigniter'], logo: codeigniter, website: 'https://codeigniter.com' },
