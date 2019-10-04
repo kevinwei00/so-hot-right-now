@@ -8,7 +8,7 @@ export default function EntrySelect(props) {
   const categoryNames = allCategories.map((category) => {
     return (
       <option key={category} value={category}>
-        {STORE[category].categoryName}
+        {STORE[category].categoryname}
       </option>
     );
   });

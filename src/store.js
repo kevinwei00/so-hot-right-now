@@ -144,8 +144,8 @@ import yii from './logos/yii.png';
 import zend from './logos/zend.png';
 
 export default {
-  apiDev: {
-    categoryName: 'API/Backend Dev',
+  'api-dev': {
+    categoryname: 'API/Backend Dev',
     list: {
       express: { name: 'Express', keywords: ['express', 'expressjs', 'express.js'], logo: express, website: 'http://expressjs.com' },
       graphql: { name: 'GraphQL', keywords: ['graphql', 'graph ql'], logo: graphql, website: 'https://graphql.org' },
@@ -158,14 +158,14 @@ export default {
       swagger: { name: 'Swagger', keywords: ['swagger'], logo: swagger, website: 'https://swagger.io' },
     },
   },
-  appDev_desktop: {
-    categoryName: 'Desktop App Dev',
+  'app-dev-desktop': {
+    categoryname: 'Desktop App Dev',
     list: {
       electron: { name: 'Electron', keywords: ['electron'], logo: electron, website: 'https://electronjs.org' },
     },
   },
-  appDev_mobile: {
-    categoryName: 'Mobile App Dev',
+  'app-dev-mobile': {
+    categoryname: 'Mobile App Dev',
     list: {
       ionic: { name: 'Ionic', keywords: ['ionic'], logo: ionic, website: 'https://ionicframework.com' },
       flutter: { name: 'Flutter', keywords: ['flutter'], logo: flutter, website: 'https://flutter.dev' },
@@ -173,7 +173,7 @@ export default {
     },
   },
   authentication: {
-    categoryName: 'Authentication',
+    categoryname: 'Authentication',
     list: {
       jwt: { name: 'JSON Web Token', keywords: ['jwt', 'json web token'], logo: jwt, website: 'https://jwt.io' },
       oauth: { name: 'OAuth', keywords: ['oauth', 'oauth2'], logo: oauth, website: 'https://oauth.net' },
@@ -181,7 +181,7 @@ export default {
     },
   },
   bundler: {
-    categoryName: 'Bundlers',
+    categoryname: 'Bundlers',
     list: {
       browserify: { name: 'Browserify', keywords: ['browserify'], logo: browserify, website: 'http://browserify.org' },
       parcel: { name: 'Parcel', keywords: ['parcel'], logo: parcel, website: 'https://parceljs.org' },
@@ -190,7 +190,7 @@ export default {
     },
   },
   cicd: {
-    categoryName: 'CI/CD',
+    categoryname: 'CI/CD',
     list: {
       circleci: { name: 'CircleCI', keywords: ['circleci', 'circle ci'], logo: circleci, website: 'https://circleci.com' },
       jenkins: { name: 'Jenkins', keywords: ['jenkins', 'jenkin'], logo: jenkins, website: 'https://jenkins.io' },
@@ -198,16 +198,16 @@ export default {
       travisci: { name: 'Travis CI', keywords: ['travisci', 'travis ci'], logo: travisci, website: 'https://travis-ci.com' },
     },
   },
-  css_architecture: {
-    categoryName: 'CSS Architecture',
+  'css-architecture': {
+    categoryname: 'CSS Architecture',
     list: {
       bem: { name: 'BEM', keywords: ['bem'], logo: bem, website: 'https://en.bem.info' },
       oocss: { name: 'OOCSS', keywords: ['oocss'], logo: oocss, website: 'http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code' },
       smacss: { name: 'SMACSS', keywords: ['smacss'], logo: smacss, website: 'http://smacss.com' },
     },
   },
-  css_framework: {
-    categoryName: 'CSS Frameworks',
+  'css-framework': {
+    categoryname: 'CSS Frameworks',
     list: {
       bootstrap: { name: 'Bootstrap', keywords: ['bootstrap'], logo: bootstrap, website: 'https://getbootstrap.com' },
       bulma: { name: 'Bulma', keywords: ['bulma'], logo: bulma, website: 'https://bulma.io' },
@@ -217,8 +217,8 @@ export default {
       tailwind: { name: 'Tailwind CSS', keywords: ['tailwind', 'tailwindcss'], logo: tailwind, website: 'https://tailwindcss.com' },
     },
   },
-  css_preprocessor: {
-    categoryName: 'CSS Preprocessors',
+  'css-preprocessor': {
+    categoryname: 'CSS Preprocessors',
     list: {
       less: { name: 'LESS', useAnd: true, keywords: ['less', 'css'], logo: less, website: 'http://lesscss.org' },
       postcss: { name: 'PostCSS', keywords: ['postcss', 'post css'], logo: postcss, website: 'https://postcss.org' },
@@ -226,16 +226,16 @@ export default {
       stylus: { name: 'Stylus', keywords: ['stylus'], logo: stylus, website: 'http://stylus-lang.com' },
     },
   },
-  database_inMemory: {
-    categoryName: 'In-Memory Databases',
+  'database-inmemory': {
+    categoryname: 'In-Memory Databases',
     list: {
       aerospike: { name: 'Aerospike', keywords: ['aerospike'], logo: aerospike, website: 'https://www.aerospike.com' },
       memcached: { name: 'Memcached', keywords: ['memcached'], logo: memcached, website: 'http://memcached.org' },
       redis: { name: 'Redis', keywords: ['redis'], logo: redis, website: 'https://redis.io' },
     },
   },
-  database_nosql: {
-    categoryName: 'NoSQL Databases',
+  'database-nosql': {
+    categoryname: 'NoSQL Databases',
     list: {
       cassandra: { name: 'Cassandra', keywords: ['cassandra'], logo: cassandra, website: 'http://cassandra.apache.org' },
       cosmosdb: { name: 'Cosmos DB', keywords: ['cosmosdb', 'cosmos db'], logo: cosmosdb, website: 'https://azure.microsoft.com/en-us/services/cosmos-db' },
@@ -244,8 +244,8 @@ export default {
       mongodb: { name: 'MongoDB', keywords: ['mongo', 'mongodb'], logo: mongodb, website: 'https://www.mongodb.com' },
     },
   },
-  database_relational: {
-    categoryName: 'Relational Databases',
+  'database-relational': {
+    categoryname: 'Relational Databases',
     list: {
       mariadb: { name: 'MariaDB', keywords: ['mariadb', 'maria db'], logo: mariadb, website: 'https://mariadb.com' },
       mssql: { name: 'Microsoft SQL Server', keywords: ['mssql', 'ms sql', 'microsoft sql', 'microsoftsql', 'sql server'], logo: mssql, website: 'https://www.microsoft.com/en-us/sql-server' },
@@ -255,7 +255,7 @@ export default {
     },
   },
   deployment: {
-    categoryName: 'Deployment',
+    categoryname: 'Deployment',
     list: {
       appengine: { name: 'Google App Engine', keywords: ['app engine', 'appengine'], logo: appengine, website: 'https://cloud.google.com/appengine' },
       azure: { name: 'Microsoft Azure', keywords: ['azure'], logo: azure, website: 'https://azure.microsoft.com' },
@@ -265,8 +265,8 @@ export default {
       heroku: { name: 'Heroku', keywords: ['heroku'], logo: heroku, website: 'https://www.heroku.com' },
     },
   },
-  devOps: {
-    categoryName: 'DevOps',
+  'devops': {
+    categoryname: 'DevOps',
     list: {
       ansible: { name: 'Ansible', keywords: ['ansible'], logo: ansible, website: 'https://www.ansible.com' },
       chef: { name: 'Chef', keywords: ['chef'], logo: chef, website: 'https://www.chef.io' },
@@ -278,8 +278,8 @@ export default {
       terraform: { name: 'Terraform', keywords: ['terraform'], logo: terraform, website: 'https://www.terraform.io' },
     },
   },
-  framework_js: {
-    categoryName: 'Frontend JS Frameworks',
+  'framework-js': {
+    categoryname: 'Frontend JS Frameworks',
     list: {
       angular: { name: 'Angular', keywords: ['angular', 'angularjs', 'angular.js', 'angular2', 'angular3', 'angular4', 'angular5', 'angular6', 'angular7', 'angular8'], logo: angular, website: 'https://angular.io' },
       aurelia: { name: 'Aurelia', keywords: ['aurelia', 'aureliajs', 'aurelia.js'], logo: aurelia, website: 'https://aurelia.io' },
@@ -294,8 +294,8 @@ export default {
       vue: { name: 'Vue', keywords: ['vue', 'vuejs', 'vue.js'], logo: vue, website: 'https://vuejs.org' },
     },
   },
-  framework_other: {
-    categoryName: 'Other Web Frameworks',
+  'framework-other': {
+    categoryname: 'Other Web Frameworks',
     list: {
       asp: { name: 'ASP.NET', keywords: ['asp', 'asp.net'], logo: asp, website: 'https://dotnet.microsoft.com/apps/aspnet' },
       codeigniter: { name: 'CodeIgniter', keywords: ['codeigniter'], logo: codeigniter, website: 'https://codeigniter.com' },
@@ -314,7 +314,7 @@ export default {
     },
   },
   language: {
-    categoryName: 'Languages',
+    categoryname: 'Languages',
     list: {
       clojure: { name: 'Clojure', keywords: ['clojure'], logo: clojure, website: 'https://clojure.org' },
       csharp: { name: 'C#', keywords: ['c#', '.net'], logo: csharp, website: 'https://docs.microsoft.com/en-us/dotnet/csharp' },
@@ -334,8 +334,8 @@ export default {
       typescript: { name: 'TypeScript', keywords: ['typescript', 'type script'], logo: typescript, website: 'http://www.typescriptlang.org' },
     },
   },
-  library_javascript: {
-    categoryName: 'JavaScript Libraries',
+  'library-js': {
+    categoryname: 'JavaScript Libraries',
     list: {
       d3: { name: 'D3', keywords: ['d3js', 'd3 js', 'd3.js'], logo: d3, website: 'https://d3js.org' },
       jquery: { name: 'jQuery', keywords: ['jquery'], logo: jquery, website: 'https://jquery.com' },
@@ -345,8 +345,8 @@ export default {
       underscore: { name: 'Underscore', keywords: ['underscore', 'underscore.js'], logo: underscore, website: 'https://underscorejs.org' },
     },
   },
-  messageBroker: {
-    categoryName: 'Message Brokers',
+  messagebroker: {
+    categoryname: 'Message Brokers',
     list: {
       activemq: { name: 'ActiveMQ', keywords: ['activemq', 'active mq'], logo: activemq, website: 'http://activemq.apache.org' },
       kafka: { name: 'Kafka', keywords: ['kafka'], logo: kafka, website: 'http://kafka.apache.org' },
@@ -354,31 +354,41 @@ export default {
       wso2: { name: 'WSO2 Message Broker', keywords: ['wso2'], logo: wso2, website: 'https://wso2.com/products/message-broker' },
     },
   },
-  packageManager: {
-    categoryName: 'Package Managers',
+  packagemanager: {
+    categoryname: 'Package Managers',
     list: {
       bower: { name: 'Bower', keywords: ['bower'], logo: bower, website: 'https://bower.io' },
       npm: { name: 'npm', keywords: ['npm', 'node package manager'], logo: npm, website: 'https://www.npmjs.com' },
       yarn: { name: 'Yarn', keywords: ['yarn'], logo: yarn, website: 'https://yarnpkg.com' },
     },
   },
-  searchEngine: {
-    categoryName: 'Search Engines',
+  searchengine: {
+    categoryname: 'Search Engines',
     list: {
       elasticsearch: { name: 'Elasticsearch', keywords: ['elasticsearch', 'elastic search'], logo: elasticsearch, website: 'https://www.elastic.co/products/elasticsearch' },
       lucene: { name: 'Lucene', keywords: ['lucene'], logo: lucene, website: 'http://lucene.apache.org' },
       solr: { name: 'Solr', keywords: ['solr'], logo: solr, website: 'https://lucene.apache.org/solr' },
     },
   },
+  ssg: {
+    categoryname: 'Static Site Generators',
+    list: {
+      gatsby: { name: 'Gatsby', keywords: ['gatsby'], logo: gatsby, website: 'https://www.gatsbyjs.org' },
+      hugo: { name: 'Hugo', keywords: ['hugo'], logo: hugo, website: 'https://gohugo.io' },
+      jekyll: { name: 'Jekyll', keywords: ['jekyll'], logo: jekyll, website: 'https://jekyllrb.com' },
+      next: { name: 'Next.js', keywords: ['nextjs', 'next js', 'next.js'], logo: next, website: 'https://zeit.co/blog/next' },
+      nuxt: { name: 'Nuxt.js', keywords: ['nuxtjs', 'nuxt js', 'nuxt.js'], logo: nuxt, website: 'https://nuxtjs.org' },
+    },
+  },
   ssr: {
-    categoryName: 'Server Side Rendering',
+    categoryname: 'Server Side Rendering',
     list: {
       next: { name: 'Next.js', keywords: ['nextjs', 'next js', 'next.js'], logo: next, website: 'https://zeit.co/blog/next' },
       nuxt: { name: 'Nuxt.js', keywords: ['nuxtjs', 'nuxt js', 'nuxt.js'], logo: nuxt, website: 'https://nuxtjs.org' },
     },
   },
-  stateManagement: {
-    categoryName: 'State Management',
+  statemanagement: {
+    categoryname: 'State Management',
     list: {
       flux: { name: 'Flux', keywords: ['flux'], logo: flux, website: 'http://facebook.github.io/flux' },
       mobx: { name: 'MobX', keywords: ['mobx'], logo: mobx, website: 'https://mobx.js.org' },
@@ -388,18 +398,8 @@ export default {
       vuex: { name: 'Vuex', keywords: ['vuex'], logo: vue, website: 'https://vuex.vuejs.org' },
     },
   },
-  staticSite: {
-    categoryName: 'Static Site Generators',
-    list: {
-      gatsby: { name: 'Gatsby', keywords: ['gatsby'], logo: gatsby, website: 'https://www.gatsbyjs.org' },
-      hugo: { name: 'Hugo', keywords: ['hugo'], logo: hugo, website: 'https://gohugo.io' },
-      jekyll: { name: 'Jekyll', keywords: ['jekyll'], logo: jekyll, website: 'https://jekyllrb.com' },
-      next: { name: 'Next.js', keywords: ['nextjs', 'next js', 'next.js'], logo: next, website: 'https://zeit.co/blog/next' },
-      nuxt: { name: 'Nuxt.js', keywords: ['nuxtjs', 'nuxt js', 'nuxt.js'], logo: nuxt, website: 'https://nuxtjs.org' },
-    },
-  },
-  taskRunner: {
-    categoryName: 'Task Runners',
+  taskrunner: {
+    categoryname: 'Task Runners',
     list: {
       grunt: { name: 'Grunt', keywords: ['grunt'], logo: grunt, website: 'https://gruntjs.com' },
       gulp: { name: 'gulp', keywords: ['gulp'], logo: gulp, website: 'https://gulpjs.com' },
@@ -407,7 +407,7 @@ export default {
     },
   },
   testing: {
-    categoryName: 'Testing',
+    categoryname: 'Testing',
     list: {
       ava: { name: 'AVA', keywords: ['ava'], logo: ava, website: 'https://github.com/avajs/ava' },
       chai: { name: 'Chai', keywords: ['chai'], logo: chai, website: 'https://www.chaijs.com' },
