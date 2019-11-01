@@ -1,18 +1,13 @@
-const ENDPOINT = 'https://serene-beach-65298.herokuapp.com';
-// const ENDPOINT = 'http://localhost:8000/';
-const API_KEY = process.env.REACT_APP_API_KEY;
+import config from './config';
 
 function MakeRequest(keywordsArray, useAnd = false) {
-  return fetch(`${ENDPOINT}`, {
-    method: 'POST',
+  const keywords = keywordsArray.join(',');
+  return fetch(`${config.API_ENDPOINT}/search?useAnd=${useAnd}&keywords=${keywords}`, {
+    method: 'GET',
     headers: {
-      authorization: `Bearer ${API_KEY}`,
+      authorization: `Bearer ${config.API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      keywordsArray,
-      useAnd,
-    }),
   })
     .then((response) => {
       if (!response.ok) {

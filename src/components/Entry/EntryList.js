@@ -23,14 +23,14 @@ export default class EntryList extends Component {
       return FetchAPI.MakeRequest(
         entryInfo.keywords,
         entryInfo.useAnd
-      ).then((resultNumJobListings) => {
+      ).then((result) => {
         return (
           <Entry
             key={entryKey}
             name={entryInfo.name}
             logo={entryInfo.logo}
             website={entryInfo.website}
-            numJobListings={resultNumJobListings}
+            numJobListings={result.totalResults}
           />
         );
       });
