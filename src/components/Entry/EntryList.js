@@ -4,7 +4,6 @@ import './EntryList.css';
 import Entry from './Entry';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import FetchAPI from '../../fetchAPI';
-import config from '../../config';
 
 export default class EntryList extends Component {
   state = {
@@ -12,7 +11,7 @@ export default class EntryList extends Component {
     entries: [],
   };
 
-  async updateEntries(category) {
+  updateEntries = async (category) => {
     const allTools = await FetchAPI.GetAllToolsForCategory(category);
     let entries = await allTools.map(async (tool) => {
       const result = await FetchAPI.GetNumJobListings(tool.keywords, tool.useAnd);
@@ -20,7 +19,7 @@ export default class EntryList extends Component {
         <Entry
           key={tool.tool_id}
           name={tool.tool_name}
-          logo={`${config.API_ENDPOINT}/logos/${tool.logo}`}
+          logo={tool.links.logo}
           website={tool.website}
           numJobListings={result.totalResults}
         />
