@@ -5,24 +5,31 @@ import PropTypes from 'prop-types';
 import './Main.css';
 import EntryMaster from '../Entry/EntryMaster';
 import About from '../About/About';
+import FetchAPI from '../../fetchAPI';
 
 export default class Main extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    allCategories: [],
+    currentCategory: '',
+  };
 
-    this.state = {
-      currentCategory: '',
-    };
-  }
+  handleChange = (currentCategory) => {
+    this.setState({ currentCategory });
+  };
 
-  handleChange = (selectedCategory) => {
-    this.setState({
-      currentCategory: selectedCategory,
+  handleGetAllCategories = () => {
+    FetchAPI.GetAllCategories().then((allCategories) => {
+      this.setState({ allCategories });
     });
+  };
+
+  componentDidMount = () => {
+    this.handleGetAllCategories();
   };
 
   render() {
     const contextValue = {
+      allCategories: this.state.allCategories,
       currentCategory: this.state.currentCategory,
       handleChange: this.handleChange,
     };

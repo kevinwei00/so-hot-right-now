@@ -4,57 +4,42 @@ import './EntryList.css';
 import Entry from './Entry';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import FetchAPI from '../../fetchAPI';
-import STORE from '../../store';
+import config from '../../config';
 
 export default class EntryList extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    hasLoaded: false,
+    entries: [],
+  };
 
-    this.state = {
-      isLoading: false,
-      entries: [],
-    };
-  }
+  async updateEntries(category) {
+    const allTools = await FetchAPI.GetAllToolsForCategory(category);
+    let entries = await allTools.map(async (tool) => {
+      const result = await FetchAPI.GetNumJobListings(tool.keywords, tool.useAnd);
+      return (
+        <Entry
+          key={tool.tool_id}
+          name={tool.tool_name}
+          logo={`${config.API_ENDPOINT}/logos/${tool.logo}`}
+          website={tool.website}
+          numJobListings={result.totalResults}
+        />
+      );
+    });
 
-  getEntryPromises = (category) => {
-    return Object.entries(STORE[category].list).map((entry) => {
-      const entryKey = entry[0];
-      const entryInfo = entry[1];
-      return FetchAPI.MakeRequest(
-        entryInfo.keywords,
-        entryInfo.useAnd
-      ).then((result) => {
-        return (
-          <Entry
-            key={entryKey}
-            name={entryInfo.name}
-            logo={entryInfo.logo}
-            website={entryInfo.website}
-            numJobListings={result.totalResults}
-          />
-        );
+    Promise.all(
+      entries.map((entry) => entry.then((resolvedEntry) => resolvedEntry))
+    ).then((resolvedEntries) => {
+      const sortedEntries = [...resolvedEntries].sort((a, b) =>
+        a.props.numJobListings < b.props.numJobListings ? 1 : -1
+      );
+      this.setState({
+        hasLoaded: true,
+        entries: sortedEntries,
       });
+      this.setColumnCount(sortedEntries.length);
     });
-  };
-
-  updateEntries = (category) => {
-    this.setState({
-      isLoading: true,
-    });
-
-    Promise.all(this.getEntryPromises(category)).then(
-      (resolvedEntryPromises) => {
-        const sortedEntries = [...resolvedEntryPromises].sort((a, b) =>
-          a.props.numJobListings < b.props.numJobListings ? 1 : -1
-        );
-        this.setState({
-          isLoading: false,
-          entries: sortedEntries,
-        });
-        this.setColumnCount(sortedEntries.length);
-      }
-    );
-  };
+  }
 
   componentDidMount = () => {
     this.updateEntries(this.props.currentCategory);
@@ -66,8 +51,7 @@ export default class EntryList extends Component {
   };
 
   setColumnCount = (numEntries) => {
-    numEntries =
-      typeof numEntries === 'number' ? numEntries : this.state.entries.length;
+    numEntries = typeof numEntries === 'number' ? numEntries : this.state.entries.length;
     let count = numEntries < 3 ? numEntries : 3;
     // window.innerWidth is accurate regardless of orientation
     const screenWidth = window.innerWidth;
@@ -80,20 +64,15 @@ export default class EntryList extends Component {
         count = numEntries < 5 ? numEntries : 5;
       }
     }
-    document.documentElement.style.setProperty(
-      '--column-count',
-      count.toString()
-    );
+    document.documentElement.style.setProperty('--column-count', count.toString());
   };
 
   render() {
     return (
       <div className="EntryList">
         <div className="EntryList__InnerContainer">
-          {this.state.isLoading && <h2>Loading...</h2>}
-          {!this.state.isLoading && (
-            <ErrorBoundary>{this.state.entries}</ErrorBoundary>
-          )}
+          {!this.state.hasLoaded && <h2>Loading...</h2>}
+          {this.state.hasLoaded && <ErrorBoundary>{this.state.entries}</ErrorBoundary>}
         </div>
       </div>
     );

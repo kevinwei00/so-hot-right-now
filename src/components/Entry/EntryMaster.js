@@ -7,10 +7,11 @@ import EntrySelect from './EntrySelect';
 export default function EntryMaster() {
   return (
     <EntryContext.Consumer>
-      {({ currentCategory, handleChange }) => (
+      {({ allCategories, currentCategory, handleChange }) => (
         <section className="EntryMaster">
           <EntrySelect
             onChange={handleChange}
+            allCategories={allCategories}
             currentCategory={currentCategory}
           />
           {currentCategory && (

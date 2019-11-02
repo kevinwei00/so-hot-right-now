@@ -1,20 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './EntrySelect.css';
-import STORE from '../../store';
 
 export default function EntrySelect(props) {
-  const allCategories = Object.keys(STORE);
-  const categoryNames = allCategories.map((category) => {
-    return (
-      <option key={category} value={category}>
-        {STORE[category].categoryname}
-      </option>
-    );
-  });
-
+  // TODO: select should be disabled during a fetch
   return (
-    // TODO: select should be disabled during a fetch
     <div className="EntrySelect">
       <label className="EntrySelect__Label" htmlFor="Categories">
         What's hot right now in...
@@ -23,15 +13,20 @@ export default function EntrySelect(props) {
         className="EntrySelect__Categories"
         name="Categories"
         id="Categories"
-        defaultValue={
-          props.currentCategory ? props.currentCategory : 'NO_SELECTION'
-        }
+        defaultValue={props.currentCategory ? props.currentCategory : 'NO_SELECTION'}
         onChange={(event) => props.onChange(event.currentTarget.value)}
       >
         <option value="NO_SELECTION" disabled>
           Category
         </option>
-        {categoryNames}
+        {props.allCategories.length > 0 &&
+          props.allCategories.map((category) => {
+            return (
+              <option key={category.id} value={category.id}>
+                {category.category_name}
+              </option>
+            );
+          })}
       </select>
     </div>
   );
