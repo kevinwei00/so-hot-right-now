@@ -172,7 +172,7 @@ const store_SQLReady = {
     categoryname: 'Languages',
     list: {
       clojure: { name: 'Clojure', keywords: ['clojure'], website: 'https://clojure.org' },
-      csharp: { name: 'C#', keywords: ['c#', '.net'], website: 'https://docs.microsoft.com/en-us/dotnet/csharp' },
+      csharp: { name: 'C#', keywords: ['c%23', 'csharp', '.net'], website: 'https://docs.microsoft.com/en-us/dotnet/csharp' },
       ecmascript: { name: 'ECMAScript', keywords: ['es6', 'es7', 'es8', 'es9', 'es2015', 'es2016', 'es2017', 'es2018'], website: 'https://www.ecma-international.org/publications/standards/Ecma-262.htm' },
       elixir: { name: 'Elixir', keywords: ['elixir'], website: 'https://elixir-lang.org' },
       erlang: { name: 'Erlang', keywords: ['erlang'], website: 'https://www.erlang.org' },

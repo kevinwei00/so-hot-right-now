@@ -5,11 +5,11 @@ let toolData = ``;
 for (let category_id in store) {
   const tools = store[category_id].list;
   for (let tool_id in tools) {
-    const arr = tools[tool_id].keywords;
+    const keywordsArr = tools[tool_id].keywords;
     toolData += `
-    ('${tool_id}', '${tools[tool_id].name}', '{${arr.map((keyword) => {
+    ('${tool_id}', '${tools[tool_id].name}', '{${keywordsArr.map((keyword) => {
       return `"${keyword}"`;
-    })}}', '${tools[tool_id].website}', ''),`;
+    })}}', '${tools[tool_id].website}', '${tool_id}'),`; // except for vuex
   }
 }
 
