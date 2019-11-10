@@ -4,11 +4,11 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <footer className="Footer">
-      <div>
-        <Link to="/about">What's this for?</Link>
-      </div>
-      <div>by Kevin Wei</div>
+    <footer className="Footer text-center">
+      <div className="Footer__separator"></div>
+      <Link to="/about">
+        <div className="Footer__content">What's this for?</div>
+      </Link>
     </footer>
   );
 }

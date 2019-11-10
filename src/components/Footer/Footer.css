@@ -7,5 +7,18 @@
   /**********************************
     Own properties
   ***********************************/
-  
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 10px;
+  font-weight: bold;
+}
+
+.Footer__separator {
+  margin: 0 auto 10px;
+  border-bottom: 1px solid #2b2b2b;
+  width: 10rem;
+}
+
+.Footer__content {
+
 }

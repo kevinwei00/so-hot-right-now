@@ -4,7 +4,7 @@ import Fire from '../Fire/Fire';
 
 export default function Header() {
   return (
-    <header className="Header">
+    <header className="Header text-center">
       <div className="Header__Container">
         <h1>
           <div className="Header__LogoTop">

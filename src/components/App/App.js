@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
@@ -9,7 +10,7 @@ export default function App() {
     <div className="App">
       <Header />
       <Main />
-      <Footer />
+      <Route exact path="/" component={Footer} />
     </div>
   );
 }

@@ -5,11 +5,28 @@ import './About.css';
 export default function About() {
   return (
     <section className="About">
-      <h2>What's This For?</h2>
-      <p>This is the about page with a disclaimer. Powered by Indeed.</p>
-      <Link to="/">
-        <button>Okay, show me what's hot!</button>
-      </Link>
+      <h2 className="text-center">What's This For?</h2>
+      <div className="About__content">
+        This site shows current job demand for popular web technologies. Whether you are a
+        student or a professional web developer, this site can help you make informed
+        decisions about what skills are worthwhile to pick up. The web development
+        landscape is always changing, so this site makes no prescriptions about what you
+        should learn, but rather shows you objective numbers.
+      </div>
+      <div className="About__content text-center">
+        <Link to="/">
+          <button>
+            <div>Okay, show me</div>
+            <div>what's hot!</div>
+          </button>
+        </Link>
+      </div>
+      <div className="About__content text-center">
+        <div>So Hot Right Now API is powered by</div>
+        <a href="http://www.indeed.com/" rel="nofollow">
+          <div class="indeedLogo"></div>
+        </a>
+      </div>
     </section>
   );
 }
