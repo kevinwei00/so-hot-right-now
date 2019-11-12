@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './About.css';
+import DocumentUtils from '../../utils/document-utils';
 
 export default function About() {
+  DocumentUtils.scrollToTop();
   return (
     <section className="About">
       <h2 className="text-center">What's This For?</h2>
@@ -23,8 +25,8 @@ export default function About() {
       </div>
       <div className="About__content text-center">
         <div>So Hot Right Now API is powered by</div>
-        <a href="http://www.indeed.com/" rel="nofollow">
-          <div class="indeedLogo"></div>
+        <a href="http://www.indeed.com/" target="_blank" rel="noopener noreferrer">
+          <div className="indeedLogo"></div>
         </a>
       </div>
     </section>
